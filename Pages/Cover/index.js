@@ -71,7 +71,7 @@ const Tagline = styled.h6`
 `;
 
 const BrightColor = styled.span`
-  color: #700548;
+  color: #e91e63;
 `;
 
 const Wrapper = styled(UnstyledContainer)`
@@ -81,7 +81,9 @@ const Wrapper = styled(UnstyledContainer)`
   min-height: 100vh;
   background: black;
   color: white;
-  position: relative;
+  display:flex;
+  justify-content:center;
+  align-items:center;
 `;
 
 const Row = styled(UnstyledRow)`
@@ -98,7 +100,7 @@ const ContentArea = styled.div`
 `;
 
 const Logo = styled.div`
-  color: #700548;
+  color: #e91e63;
   height: 300px;
   width: 300px;
   font-size: 300px;
