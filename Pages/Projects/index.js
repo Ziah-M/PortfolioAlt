@@ -7,15 +7,19 @@ import {
 } from "react-bootstrap";
 import { ProjectCard as UnstyledProjectCard } from "./ProjectCard";
 
-const Projects = () => {
+const DEFAULT_PROJECTS = ["1", "2", "3", "4"];
+
+const Projects = ({
+  toggleShowProject = (f) => f,
+  projects = DEFAULT_PROJECTS,
+}) => {
   return (
     <Wrapper fluid>
       <Heading>Projects</Heading>
       <Showcase>
-        <ProjectCard></ProjectCard>
-        <ProjectCard></ProjectCard>
-        <ProjectCard></ProjectCard>
-        <ProjectCard></ProjectCard>
+        {projects.map((project) => (
+          <ProjectCard toggleShowProject={toggleShowProject}></ProjectCard>
+        ))}
       </Showcase>
     </Wrapper>
   );

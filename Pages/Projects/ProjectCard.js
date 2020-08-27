@@ -6,9 +6,9 @@ import {
   Col,
 } from "react-bootstrap";
 
-const ProjectCard = (props) => {
+const ProjectCard = ({toggleShowProject = (f) => f,}) => {
     return (
-        <Wrapper>
+        <Wrapper onClick={() => toggleShowProject('t')}>
             App 1
         </Wrapper>
     )
