@@ -1,106 +1,43 @@
 import React, { useState } from "react";
 import styled, { keyframes } from "styled-components";
 import { getProjectData } from "../../Data";
-
-const growShrink = keyframes`
-from {
-  transform:scale(0.5, 0.5);
-}
-
-to {
-  transform:scale(1, 1);
-}
-`;
-
-const Grow = styled.div`
-  animation: ${growShrink} 0.5s linear reverse;
-`;
-
-const Shrink = styled.div`
-  animation: ${growShrink} 0.5s linear;
-`;
+import '../../Animations/animations.css'
 
 const ProjectOverview = ({ id = "", toggleShowProject = (f) => f }) => {
   const { name, url, technologies, description, imgUrl } = getProjectData(id);
 
-  const [triggerOutAnimation, setTriggerOutAnimation] = useState(false);
-
-  const handleClick = () => {
-    setTriggerOutAnimation(true);
-    setTimeout(() => toggleShowProject(""), 500);
-  };
   return (
-    <>
-      {triggerOutAnimation ? (
-        <Grow>
-          <Wrapper>
-            <Exit onClick={handleClick}>X</Exit>
-            <Heading>
-              <b>
-                {name}
-                <ColoredSpan>.</ColoredSpan>
-              </b>
-            </Heading>
-            <Section>
-              <ServicesContainer>
-                <b>TECHNOLOGIES</b>
-                {technologies.map((technology) => (
-                  <>
-                    <br />
-                    {technology}
-                  </>
-                ))}
-                <br />
-                Test
-              </ServicesContainer>
-              <LaunchBtn>
-                <b>Launch Site</b>
-              </LaunchBtn>
-            </Section>
-            <Description>{description}</Description>
-            <ImageSection>
-              <ImgWrapper>
-                <Image src={imgUrl} />
-              </ImgWrapper>
-            </ImageSection>
-          </Wrapper>
-        </Grow>
-      ) : (
-        <Shrink>
-          <Wrapper>
-            <Exit onClick={handleClick}>X</Exit>
-            <Heading>
-              <b>
-                {name}
-                <ColoredSpan>.</ColoredSpan>
-              </b>
-            </Heading>
-            <Section>
-              <ServicesContainer>
-                <b>TECHNOLOGIES</b>
-                {technologies.map((technology) => (
-                  <>
-                    <br />
-                    {technology}
-                  </>
-                ))}
-                <br />
-                Test
-              </ServicesContainer>
-              <LaunchBtn>
-                <b>Launch Site</b>
-              </LaunchBtn>
-            </Section>
-            <Description>{description}</Description>
-            <ImageSection>
-              <ImgWrapper>
-                <Image src={imgUrl} />
-              </ImgWrapper>
-            </ImageSection>
-          </Wrapper>
-        </Shrink>
-      )}
-    </>
+    <Wrapper>
+      <Exit onClick={() => toggleShowProject("")}>X</Exit>
+      <Heading>
+        <b>
+          {name}
+          <ColoredSpan>.</ColoredSpan>
+        </b>
+      </Heading>
+      <Section>
+        <ServicesContainer>
+          <b>TECHNOLOGIES</b>
+          {technologies.map((technology) => (
+            <>
+              <br />
+              {technology}
+            </>
+          ))}
+          <br />
+          Test
+        </ServicesContainer>
+        <LaunchBtn>
+          <b>Launch Site</b>
+        </LaunchBtn>
+      </Section>
+      <Description>{description}</Description>
+      <ImageSection>
+        <ImgWrapper>
+          <Image src={imgUrl} />
+        </ImgWrapper>
+      </ImageSection>
+    </Wrapper>
   );
 };
 
