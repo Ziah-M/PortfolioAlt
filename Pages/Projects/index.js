@@ -7,7 +7,12 @@ import {
 } from "react-bootstrap";
 import { ProjectCard as UnstyledProjectCard } from "./ProjectCard";
 
-const DEFAULT_PROJECTS = ["1", "2", "3", "4"];
+const DEFAULT_PROJECTS = [
+  "Gioventinos",
+  "Movies Overload",
+  "Organic Shop",
+  "TODO",
+];
 
 const Projects = ({
   toggleShowProject = (f) => f,
@@ -18,7 +23,10 @@ const Projects = ({
       <Heading>Projects</Heading>
       <Showcase>
         {projects.map((project) => (
-          <ProjectCard toggleShowProject={toggleShowProject}></ProjectCard>
+          <ProjectCard
+            projectId={project}
+            toggleShowProject={toggleShowProject}
+          ></ProjectCard>
         ))}
       </Showcase>
     </Wrapper>
@@ -47,7 +55,7 @@ const Row = styled(UnstyledRow)``;
 const ProjectCard = styled(UnstyledProjectCard)``;
 
 const Showcase = styled(Row)`
-  margin: 50px 20% 50px 20%;
+  margin: 50px 12% 50px 12%;
   display: flex;
   flex-wrap: wrap;
 `;
