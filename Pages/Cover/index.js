@@ -1,46 +1,119 @@
 import React from "react";
-import styled from "styled-components";
 import {
   Container as UnstyledContainer,
   Row as UnstyledRow,
-  Col,
 } from "react-bootstrap";
+import { Link as UnstyledLink } from "react-scroll";
+import styled from "styled-components";
 
-const Cover = () => {
+import { Timeline, Tween } from "react-gsap";
+import { Controller, Scene } from "react-scrollmagic";
+
+const Cover = ({ handleScroll = (f) => f }) => {
   return (
     <Wrapper>
-      <ForegroundCenteredContainer>
-        <Container
-          style={{
-            height: "300px",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-          }}
+      <Timeline
+        labels={[
+          {
+            label: "start",
+            position: 0,
+          },
+          {
+            label: "start-name",
+            position: "start+=1",
+          },
+          {
+            label: "start-tagline",
+            position: "start+=1.8",
+          },
+        ]}
+      >
+        <ForegroundCenteredContainer>
+          <Container
+            style={{
+              height: "300px",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+            }}
+          >
+            <Tween
+              from={{ filter: "blur(200px)" }}
+              to={{ filter: "blur(0px)" }}
+              duration={1}
+              position={"start-name"}
+            >
+              <Row>
+                <Name>Ziah Mayne</Name>
+              </Row>
+            </Tween>
+            <Row>
+              <Tween
+                from={{ filter: "blur(200px)", scale:0.1 }}
+                to={{ filter: "blur(0px)", scale:1 }}
+                duration={1}
+                position={"start-tagline"}
+              >
+                <Tagline>
+                  Software developer <br />
+                  specializing in frontend web development
+                </Tagline>
+              </Tween>
+            </Row>
+          </Container>
+        </ForegroundCenteredContainer>
+        <Tween
+          from={{ filter: "blur(200px)" }}
+          to={{ filter: "blur(0px)" }}
+          duration={2}
+          position={"start"}
         >
-          <Row>
-            <Name>Ziah Mayne</Name>
-          </Row>
-          <Row>
-            <Tagline>
-              Software developer <br />
-              specializing in frontend web development
-            </Tagline>
-          </Row>
-        </Container>
-      </ForegroundCenteredContainer>
-      <CenteredContainer>
-        <Container>
-          <Row>
-            <Logo>ZM</Logo>
-          </Row>
-          <Row>
-            About &nbsp;<BrightColor>/</BrightColor>&nbsp; Projects &nbsp;{" "}
-            <BrightColor>/</BrightColor> &nbsp;Contact
-          </Row>
-        </Container>
-      </CenteredContainer>
-      <ContentArea></ContentArea>
+          <CenteredContainer>
+            <Container>
+              <Row>
+                <Logo>
+                  <Initials>ZM</Initials>
+                </Logo>
+              </Row>
+              <Row>
+                <Link
+                  activeClass="active"
+                  to="about"
+                  spy={true}
+                  smooth={true}
+                  offset={-50}
+                  duration={700}
+                >
+                  About
+                </Link>{" "}
+                &nbsp;
+                <BrightColor>/</BrightColor>&nbsp;{" "}
+                <Link
+                  activeClass="active"
+                  to="projects"
+                  spy={true}
+                  smooth={true}
+                  offset={-50}
+                  duration={700}
+                >
+                  Projects
+                </Link>{" "}
+                &nbsp; <BrightColor>/</BrightColor> &nbsp;
+                <Link
+                  activeClass="active"
+                  to="contact"
+                  spy={true}
+                  smooth={true}
+                  offset={-50}
+                  duration={700}
+                >
+                  Contact
+                </Link>
+              </Row>
+            </Container>
+          </CenteredContainer>
+        </Tween>
+      </Timeline>
     </Wrapper>
   );
 };
@@ -64,10 +137,12 @@ const ForegroundCenteredContainer = styled(CenteredContainer)`
 const Name = styled.h1`
   color: white;
   font-size: 72px;
+  user-select: none;
 `;
 
 const Tagline = styled.h6`
   color: lightgray;
+  user-select: none;
 `;
 
 const BrightColor = styled.span`
@@ -81,9 +156,9 @@ const Wrapper = styled(UnstyledContainer)`
   min-height: 100vh;
   background: black;
   color: white;
-  display:flex;
-  justify-content:center;
-  align-items:center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 const Row = styled(UnstyledRow)`
@@ -95,10 +170,6 @@ const Row = styled(UnstyledRow)`
 
 const Container = styled(UnstyledContainer)``;
 
-const ContentArea = styled.div`
-  position: relative;
-`;
-
 const Logo = styled.div`
   color: #e91e63;
   height: 300px;
@@ -107,6 +178,19 @@ const Logo = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  user-select: none;
+`;
+
+const Initials = styled.span`
+  user-select: none;
+`;
+
+const Link = styled(UnstyledLink)`
+  cursor: pointer;
+  transition: 0.3s ease-in;
+  &:hover {
+    color: lightsteelblue !important;
+  }
 `;
 
 export default Cover;

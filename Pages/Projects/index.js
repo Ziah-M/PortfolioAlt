@@ -19,7 +19,7 @@ const Projects = ({
   projects = DEFAULT_PROJECTS,
 }) => {
   return (
-    <Wrapper fluid>
+    <Wrapper id='projects' fluid>
       <Heading>Projects</Heading>
       <Showcase>
         {projects.map((project) => (

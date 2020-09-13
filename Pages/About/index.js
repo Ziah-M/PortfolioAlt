@@ -4,7 +4,7 @@ import { Container as UnstyledContainer, Row, Col } from "react-bootstrap";
 
 const About = () => {
   return (
-    <Wrapper>
+    <Wrapper id='about'>
       <Heading>
         About Me<BrightColor>.</BrightColor>
       </Heading>
