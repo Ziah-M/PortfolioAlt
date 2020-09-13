@@ -36,7 +36,8 @@ const Projects = ({
 const Wrapper = styled(UnstyledContainer)`
   padding: 0;
   margin: 0;
-  min-width: 100vw;
+  max-width:100vw;
+  width: 100vw;
   min-height: 100vh;
   background: white;
   color: white;
@@ -48,6 +49,7 @@ const Wrapper = styled(UnstyledContainer)`
 
 const Heading = styled.h1`
   color: #e91e63;
+  margin-top:40px;
 `;
 
 const Row = styled(UnstyledRow)``;
@@ -57,6 +59,8 @@ const ProjectCard = styled(UnstyledProjectCard)``;
 const Showcase = styled(Row)`
   margin: 50px 12% 50px 12%;
   display: flex;
+  justify-content:center;
+  align-items:center;
   flex-wrap: wrap;
 `;
 

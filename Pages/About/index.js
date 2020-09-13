@@ -32,7 +32,8 @@ const About = () => {
 const Wrapper = styled(UnstyledContainer)`
   padding: 0;
   margin: 0;
-  min-width: 100vw;
+  max-width:100vw;
+  width: 100vw;
   min-height: 75vh;
   background: black;
   color: white;

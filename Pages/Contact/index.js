@@ -17,7 +17,8 @@ const Contact = () => {
 const Wrapper = styled.div`
   padding: 0;
   margin: 0;
-  min-width: 100vw;
+  max-width:100vw;
+  width: 100vw;
   min-height: 80vh;
   background: #e8e8e8;
   color: black;

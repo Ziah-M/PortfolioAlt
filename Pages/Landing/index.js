@@ -9,7 +9,7 @@ import Footer from "../../Components/Footer";
 
 const Landing = () => {
   return (
-    <Container fluid style={{ padding: 0 }}>
+    <Container fluid style={{ padding: 0, margin:0, maxWidth:'100vw' }}>
       <Row noGutters>
         <Col xs={2}>
           <Sidebar />

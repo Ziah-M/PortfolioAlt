@@ -35,7 +35,6 @@ const Headline = () => {
           duration="50%"
           triggerHook={0.25}
           triggerElement="#trigger-headline"
-          indicators
         >
           <Timeline
             wrapper={<Wrapper />}
@@ -48,9 +47,9 @@ const Headline = () => {
                     from={{ opacity: 1 }}
                     to={{
                       x: "8vw",
-                      y: "50vh",
+                      y: "75vh",
                       scale: 0.8,
-                      fontSize: "7vh",
+                      fontSize: "7vmin",
                       opacity: 0,
                     }}
                     position="<0.02"
@@ -79,7 +78,7 @@ const Wrapper = styled(UnstyledContainer)`
   margin: 0;
   min-width: 100vw;
   min-height: 100vh;
-  height: 1000;
+  height: 100vh;
   background: #e91e63;
   color: white;
   display: flex;
@@ -97,11 +96,13 @@ const Trigger = styled.div`
 
 const PageWrapper = styled.div`
   background: #e91e63;
-  height: 1000;
+  height: 100vh;
   padding: 0;
   margin: 0;
-  width: 100vh;
+  max-width:100vw;
+  width: 100vw;
   position: relative;
+  overflow:hidden;
 `;
 
 const Attention = styled.span`
@@ -110,7 +111,7 @@ const Attention = styled.span`
 
 const Statement = styled.h1`
   color: white;
-  font-size: 6vh;
+  font-size: 6vmin;
   text-align: center;
   width: 50%;
 
