@@ -1,0 +1,1 @@
+Built to demonstrate my proficiency and skill-set as a front-end engineer. These sites were built utilizing the React ecosystem, and my listed front-end skills. Firebase was used as the back-end, and Node.js, NPM and Webpack for the build and deployment process.
