@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import styled, { keyframes } from "styled-components";
 import { getProjectData } from "../../Data";
-import '../../Animations/animations.css'
+import "../../Animations/animations.css";
+import { useHistory } from "react-router";
 
 const ProjectOverview = ({ id = "", toggleShowProject = (f) => f }) => {
   const { name, url, technologies, description, imgUrl } = getProjectData(id);
-
+  const history = useHistory();
   return (
     <Wrapper>
       <Exit onClick={() => toggleShowProject("")}>X</Exit>
@@ -27,12 +28,12 @@ const ProjectOverview = ({ id = "", toggleShowProject = (f) => f }) => {
           <br />
           Test
         </ServicesContainer>
-        <LaunchBtn>
+        <LaunchBtn onClick={() => history.push(url)}>
           <b>Launch Site</b>
         </LaunchBtn>
       </Section>
       <Description>{description}</Description>
-      <ImageSection>
+      <ImageSection onClick={() => history.push(url)}>
         <ImgWrapper>
           <Image src={imgUrl} />
         </ImgWrapper>
@@ -64,6 +65,7 @@ const ServicesContainer = styled.div`
 const LaunchBtn = styled.button`
   border: 2px solid #e91e63;
   padding: 8px;
+  user-select: none;
   text-transform: uppercase;
   font-size: 12px;
   color: #e91e63;
@@ -79,7 +81,7 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: start;
-  max-width:100vw;
+  max-width: 100vw;
   width: 100vw;
   min-height: 100vh;
   background: #e8e8e8;

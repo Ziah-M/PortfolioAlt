@@ -1,0 +1,17 @@
+.grow-enter {
+  transform: scale(0.5, 0.5);
+}
+
+.grow-enter-active {
+  transform: scale(1, 1);
+  transition: 500ms ease-in;
+}
+
+.grow-exit {
+  transform: scale(1, 1);
+}
+
+.grow-exit-active {
+  transform: scale(0.5, 0.5);
+  transition: 500ms ease-in;
+}

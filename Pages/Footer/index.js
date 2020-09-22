@@ -11,7 +11,7 @@ const Footer = () => {
     <Wrapper>
       <Link>HOME</Link>
       <Link>ABOUT</Link>
-      <Copywrite>&copy; Ziah M. 2020</Copywrite>
+      <Copywrite>&copy; 2020</Copywrite>
       <Link>PROJECTS</Link>
       <Link>CONTACT</Link>
     </Wrapper>
@@ -34,10 +34,18 @@ const Wrapper = styled(UnstyledContainer)`
 const Link = styled.div`
   text-transform: uppercase;
   margin: 0 15px;
+
+  @media (max-width:600px) {
+    margin:0 5px;
+  }
 `;
 
 const Copywrite = styled.div`
   margin: 0px 40px;
+
+  @media (max-width:600px) {
+    margin:0 12px;
+  }
 `;
 
 export default Footer;

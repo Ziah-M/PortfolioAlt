@@ -8,8 +8,10 @@ import styled from "styled-components";
 
 import { Timeline, Tween } from "react-gsap";
 import { Controller, Scene } from "react-scrollmagic";
+import {getName} from '../../Data'
 
 const Cover = ({ handleScroll = (f) => f }) => {
+  const {first, last} = getName()
   return (
     <Wrapper>
       <Timeline
@@ -44,7 +46,7 @@ const Cover = ({ handleScroll = (f) => f }) => {
               position={"start-name"}
             >
               <Row>
-                <Name>Ziah Mayne</Name>
+                <Name>{first} {last}</Name>
               </Row>
             </Tween>
             <Row>
@@ -72,7 +74,7 @@ const Cover = ({ handleScroll = (f) => f }) => {
             <Container>
               <Row>
                 <Logo>
-                  <Initials>ZM</Initials>
+          <Initials>{first.charAt(0)}{last.charAt(0)}</Initials>
                 </Logo>
               </Row>
               <Row>
@@ -188,6 +190,7 @@ const Initials = styled.span`
 
 const Link = styled(UnstyledLink)`
   cursor: pointer;
+  user-select:none;
   transition: 0.3s ease-in;
   &:hover {
     color: lightsteelblue !important;

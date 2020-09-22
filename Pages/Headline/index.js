@@ -44,6 +44,7 @@ const Headline = () => {
               <Statement>
                 {wordsArray.map((word, index) => (
                   <Tween
+                  key={`portfoli-headline-${index}`}
                     from={{ opacity: 1 }}
                     to={{
                       x: "8vw",
@@ -147,6 +148,7 @@ const Word = styled.div`
   text-align: center;
   display: inline-block;
   margin-right: 4px;
+  user-select:none;
 `;
 
 export default Headline;

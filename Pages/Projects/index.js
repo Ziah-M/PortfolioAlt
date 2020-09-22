@@ -10,8 +10,7 @@ import { ProjectCard as UnstyledProjectCard } from "./ProjectCard";
 const DEFAULT_PROJECTS = [
   "Gioventinos",
   "Movies Overload",
-  "Organic Shop",
-  "TODO",
+  // "Organic Shop",
 ];
 
 const Projects = ({
@@ -22,9 +21,10 @@ const Projects = ({
     <Wrapper id='projects' fluid>
       <Heading>Projects</Heading>
       <Showcase>
-        {projects.map((project) => (
+        {projects.map((project, index) => (
           <ProjectCard
             projectId={project}
+            key={`portfolio-showcase-${index}`}
             toggleShowProject={toggleShowProject}
           ></ProjectCard>
         ))}
@@ -50,6 +50,7 @@ const Wrapper = styled(UnstyledContainer)`
 const Heading = styled.h1`
   color: #e91e63;
   margin-top:40px;
+  font-size:52px;
 `;
 
 const Row = styled(UnstyledRow)``;
