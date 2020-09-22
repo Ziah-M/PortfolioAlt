@@ -17,19 +17,10 @@ const GIOVENTINOS = {
   imgUrl: "https://i.imgur.com/hni8BNJ.jpg",
 };
 
-// SECOND PICTURE NOT CURRENTLY IN USE
-//https://i.imgur.com/DkdZDnl.jpg
-
 const MOVIES_OVERLOAD = {
   name: "Movie Server",
   url: ROUTES.MOVIE_SERVER,
-  technologies: [
-    "HTML5",
-    "CSS3",
-    "JavaScript",
-    "React",
-    "TmDB API",
-  ],
+  technologies: ["HTML5", "CSS3", "JavaScript", "React", "TmDB API"],
   description: `A site for visually browsing information about movies and actors. Features include:
   -Reviews
   -Trailers
@@ -42,61 +33,43 @@ const MOVIES_OVERLOAD = {
   imgUrl: "https://i.imgur.com/5gVzFDC.png",
 };
 
-// SECOND PICTURE NOT CURRENTLY IN USE
-//https://i.imgur.com/YOs7eM8.png
-
-const ORGANIC_SHOP = {
-  name: "Organic Shop",
-  url: ROUTES.SHOP,
-  technologies: [
-    "HTML5",
-    "CSS3",
-    "JavaScript",
-    "React",
-    "Redux",
-    "Bootstrap",
-    "Firebase",
-  ],
-  description: `A fictional e-commerce store for organic produce. Features include:
-    -Custom-built shopping cart and order tracking systems
-    -Logging in with google to track your orders
-    -Admin back-end area to add new products to the store or access order information
-     `,
-  imgUrl: "https://i.imgur.com/Npl79Vz.jpg",
-};
-
-// SECOND PICTURE NOT CURRENTLY IN USE
-//i.imgur.com/Xu26va3.jpg
-
 const SKILLS = {
-  frontend:[
-    'React',
-    'HTML 5',
-    'CSS 3',
-    'SASS',
-    'styled-components',
-    'Redux & Redux Saga',
-    'Bootstrap',
-    'Greensock Animation Platform',
-    'Jest',
-    'Enzyme',
-    'Axios'
+  frontend: [
+    "React",
+    "HTML 5",
+    "CSS 3",
+    "SASS",
+    "styled-components",
+    "Redux & Redux Saga",
+    "Bootstrap",
+    "Greensock Animation Platform",
+    "Jest",
+    "Enzyme",
+    "Axios",
   ],
-  backend:['Firebase','Node.js','NPM','Webpack','vb.NET', 'JSON', 'XML', 'RegEx'],
-  tools:['Git, Github & Bitbucket','Gitbash','UiPath RPA','VSCode'],
-  other:['Responsive Design','Google Analytics','Sales & Marketing'],
-}
+  backend: [
+    "Firebase",
+    "Node.js",
+    "NPM",
+    "Webpack",
+    "vb.NET",
+    "JSON",
+    "XML",
+    "RegEx",
+  ],
+  tools: ["Git, Github & Bitbucket", "Gitbash", "UiPath RPA", "VSCode"],
+  other: ["Responsive Design", "Google Analytics", "Sales & Marketing"],
+};
 
 export const getProjectData = (id) => {
   if (id === "Gioventinos") return GIOVENTINOS;
   if (id === "Movies Overload") return MOVIES_OVERLOAD;
-  if (id === "Organic Shop") return ORGANIC_SHOP;
   return DEFAULT_PROJECT_DATA;
 };
 
 export const getName = () => ({
-  first:'Ziah',
-  last:'Mayne',
-})
+  first: "Ziah",
+  last: "Mayne",
+});
 
-export const getSkills= () => SKILLS
+export const getSkills = () => SKILLS;

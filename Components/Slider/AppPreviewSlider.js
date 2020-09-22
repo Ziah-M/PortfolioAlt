@@ -1,19 +1,19 @@
-import React, { useRef } from "react";
+import React from "react";
+import { Col, Container, Image, Row } from "react-bootstrap";
+import { useHistory } from "react-router-dom";
 import Slider from "react-slick";
 import styled from "styled-components";
-import { Col, Row, Container, Image } from "react-bootstrap";
 import * as ROUTES from "../../../../core/routes/routes";
-import { useHistory } from "react-router-dom";
 
 const DEFAULT_IMAGES = [
   "https://i.imgur.com/5gVzFDC.png",
   "https://i.imgur.com/YOs7eM8.png",
 ];
 
-const WIDTH = '60vw'
-const HEIGHT = '45vw'
-const MAX_WIDTH = '60vw'
-const MAX_HEIGHT = '60vh'
+const WIDTH = "60vw";
+const HEIGHT = "45vw";
+const MAX_WIDTH = "60vw";
+const MAX_HEIGHT = "60vh";
 
 const AppPreviewSlider = ({
   images = DEFAULT_IMAGES,
@@ -37,7 +37,12 @@ const AppPreviewSlider = ({
       <StyledContainer
         fluid
         className="p-0"
-        style={{ width: WIDTH, height: HEIGHT, maxWidth:MAX_WIDTH, maxHeight:MAX_HEIGHT}}
+        style={{
+          width: WIDTH,
+          height: HEIGHT,
+          maxWidth: MAX_WIDTH,
+          maxHeight: MAX_HEIGHT,
+        }}
       >
         <Row noGutters>
           <Col onClick={() => history.push(route)}>
@@ -58,12 +63,12 @@ const AppPreviewSlider = ({
 const AppPreview = styled(Image)`
   width: ${WIDTH};
   height: ${HEIGHT};
-  max-height:${MAX_HEIGHT};
-  max-width:${MAX_WIDTH};
+  max-height: ${MAX_HEIGHT};
+  max-width: ${MAX_WIDTH};
 `;
 
 const StyledContainer = styled(Container)`
-margin:10vh 0;
+  margin: 10vh 0;
   &:hover {
     outline: 2px solid green !important;
   }

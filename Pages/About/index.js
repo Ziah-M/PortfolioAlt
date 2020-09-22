@@ -1,10 +1,10 @@
 import React from "react";
+import { Container as UnstyledContainer } from "react-bootstrap";
 import styled from "styled-components";
-import { Container as UnstyledContainer, Row, Col } from "react-bootstrap";
 
 const About = () => {
   return (
-    <Wrapper id='about'>
+    <Wrapper id="about">
       <Heading>
         About Me<BrightColor>.</BrightColor>
       </Heading>
@@ -32,7 +32,7 @@ const About = () => {
 const Wrapper = styled(UnstyledContainer)`
   padding: 0;
   margin: 0;
-  max-width:100vw;
+  max-width: 100vw;
   width: 100vw;
   min-height: 75vh;
   background: black;
@@ -74,7 +74,7 @@ const Overview = styled.div`
 const Details = styled.div`
   width: 60%;
   margin: auto auto auto 25px;
-  text-align:center;
+  text-align: center;
 `;
 
 export default About;

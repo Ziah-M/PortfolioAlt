@@ -2,7 +2,7 @@ import {
   faEnvelope,
   faGem,
   faHome,
-  faUniversity,
+  faUniversity
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
@@ -11,12 +11,12 @@ import {
   DropdownButton,
   Nav,
   Navbar,
-  NavDropdown,
+  NavDropdown
 } from "react-bootstrap";
 import { useLocation } from "react-router";
 import { LinkContainer } from "react-router-bootstrap";
-import * as ROLES from "../../../../shared/constants/roles";
 import * as ROUTES from "../../../../core/routes/routes";
+import * as ROLES from "../../../../shared/constants/roles";
 import { AuthUserContext } from "../../../../shared/Session";
 
 const iconHomeStyle = {

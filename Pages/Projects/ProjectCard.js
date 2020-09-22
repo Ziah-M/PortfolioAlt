@@ -1,12 +1,10 @@
 import React from "react";
-import styled from "styled-components";
 import {
-  Container as UnstyledContainer,
-  Row as UnstyledRow,
-  Col,
+  Container as UnstyledContainer
 } from "react-bootstrap";
-
+import styled from "styled-components";
 import { getProjectData } from "../../Data";
+
 
 const ProjectCard = ({
   toggleShowProject = (f) => f,
@@ -26,10 +24,16 @@ const ProjectCard = ({
 };
 
 const Wrapper = styled(UnstyledContainer)`
-  margin: 10px;
+  margin: 5vw;
   padding: 15px;
   height: 250px;
   width: 250px;
+
+  /* @media (max-width:750px){
+  width:250px;
+  height:250px;
+} */
+
   background: #e91e63;
   display: flex;
   flex-direction: column;
@@ -39,7 +43,7 @@ const Wrapper = styled(UnstyledContainer)`
   color: lightgray;
   text-transform: uppercase;
   overflow: hidden;
-  transition:0.2s ease-in;
+  transition: 0.2s ease-in;
   &:hover {
     padding: 0;
   }
@@ -81,7 +85,7 @@ const HiddenButton = styled.button`
   font-size: 12px;
   font-weight: 500;
   z-index: 2;
-  transition:0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
   &:hover {
     color: black;
     background: white;
@@ -98,7 +102,7 @@ const Image = styled.img`
   height: 190px;
   margin: auto;
   border-radius: 5px;
-  transition:0.2s ease-in;
+  transition: 0.2s ease-in;
   ${Wrapper}:hover & {
     width: 100%;
     height: 100%;
@@ -107,3 +111,4 @@ const Image = styled.img`
 
 export default ProjectCard;
 export { ProjectCard };
+

@@ -1,17 +1,17 @@
+import { faAngleDoubleDown } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import {
   Container as UnstyledContainer,
-  Row as UnstyledRow,
+  Row as UnstyledRow
 } from "react-bootstrap";
+import { Timeline, Tween } from "react-gsap";
 import { Link as UnstyledLink } from "react-scroll";
 import styled from "styled-components";
-
-import { Timeline, Tween } from "react-gsap";
-import { Controller, Scene } from "react-scrollmagic";
-import {getName} from '../../Data'
+import { getName } from "../../Data";
 
 const Cover = ({ handleScroll = (f) => f }) => {
-  const {first, last} = getName()
+  const { first, last } = getName();
   return (
     <Wrapper>
       <Timeline
@@ -46,13 +46,15 @@ const Cover = ({ handleScroll = (f) => f }) => {
               position={"start-name"}
             >
               <Row>
-                <Name>{first} {last}</Name>
+                <Name>
+                  {first} {last}
+                </Name>
               </Row>
             </Tween>
             <Row>
               <Tween
-                from={{ filter: "blur(200px)", scale:0.1 }}
-                to={{ filter: "blur(0px)", scale:1 }}
+                from={{ filter: "blur(200px)", scale: 0.1 }}
+                to={{ filter: "blur(0px)", scale: 1 }}
                 duration={1}
                 position={"start-tagline"}
               >
@@ -74,7 +76,10 @@ const Cover = ({ handleScroll = (f) => f }) => {
             <Container>
               <Row>
                 <Logo>
-          <Initials>{first.charAt(0)}{last.charAt(0)}</Initials>
+                  <Initials>
+                    {first.charAt(0)}
+                    {last.charAt(0)}
+                  </Initials>
                 </Logo>
               </Row>
               <Row>
@@ -115,6 +120,19 @@ const Cover = ({ handleScroll = (f) => f }) => {
             </Container>
           </CenteredContainer>
         </Tween>
+        <Tween
+          from={{ y: 0 }}
+          to={{ y: -50 }}
+          duration={2}
+          repeat={-1}
+          yoyo
+          position={"start"}
+        >
+          <IconContainer>
+            <Scroll>Scroll</Scroll>
+            <Icon icon={faAngleDoubleDown} />
+          </IconContainer>
+        </Tween>
       </Timeline>
     </Wrapper>
   );
@@ -130,6 +148,9 @@ const CenteredContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 400px) {
+  }
 `;
 
 const ForegroundCenteredContainer = styled(CenteredContainer)`
@@ -140,11 +161,19 @@ const Name = styled.h1`
   color: white;
   font-size: 72px;
   user-select: none;
+
+  @media (max-width: 400px) {
+    font-size: 50px;
+  }
 `;
 
 const Tagline = styled.h6`
   color: lightgray;
   user-select: none;
+
+  @media (max-width: 400px) {
+    font-size: 14px;
+  }
 `;
 
 const BrightColor = styled.span`
@@ -154,7 +183,7 @@ const BrightColor = styled.span`
 const Wrapper = styled(UnstyledContainer)`
   padding: 0;
   margin: 0;
-  max-width:100vw;
+  max-width: 100vw;
   width: 100vw;
   min-height: 100vh;
   background: black;
@@ -178,6 +207,10 @@ const Logo = styled.div`
   height: 300px;
   width: 300px;
   font-size: 300px;
+  @media (max-width: 400px) {
+    font-size: 200px;
+  }
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -190,11 +223,29 @@ const Initials = styled.span`
 
 const Link = styled(UnstyledLink)`
   cursor: pointer;
-  user-select:none;
+  user-select: none;
   transition: 0.3s ease-in;
   &:hover {
     color: lightsteelblue !important;
   }
+`;
+
+const Scroll = styled.div`
+  font-size: 20px;
+`;
+
+const Icon = styled(FontAwesomeIcon)``;
+
+const IconContainer = styled.div`
+  color: orange;
+  font-size: 40px;
+  width: 50px;
+  height: auto;
+  text-align: center;
+  position: absolute;
+  bottom: 5vh;
+  left: 50%;
+  transform: translate(-50%);
 `;
 
 export default Cover;

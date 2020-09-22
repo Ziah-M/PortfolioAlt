@@ -1,24 +1,17 @@
 import React, { useState } from "react";
-import styled, { ThemeProvider, keyframes } from "styled-components";
-import Cover from "./Pages/Cover";
-import Headline from "./Pages/Headline";
-import About from "./Pages/About";
-import Skills from "./Pages/Skills";
-import Contact from "./Pages/Contact";
-import Projects from "./Pages/Projects";
-import Footer from "./Pages/Footer";
-import ProjectOverview from "./Pages/ProjectOverview";
-import { CSSTransition } from "react-transition-group";
 import {
-  Link,
-  Element,
-  Events,
-  animateScroll as scroll,
-  scrollSpy,
-  scroller,
+  animateScroll as scroll
 } from "react-scroll";
-
-import {withRouter} from 'react-router-dom'
+import { CSSTransition } from "react-transition-group";
+import styled, { ThemeProvider } from "styled-components";
+import About from "./Pages/About";
+import Contact from "./Pages/Contact";
+import Cover from "./Pages/Cover";
+import Footer from "./Pages/Footer";
+import Headline from "./Pages/Headline";
+import ProjectOverview from "./Pages/ProjectOverview";
+import Projects from "./Pages/Projects";
+import Skills from "./Pages/Skills";
 
 
 const theme = {

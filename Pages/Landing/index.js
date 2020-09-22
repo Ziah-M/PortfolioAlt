@@ -1,15 +1,14 @@
 import React from "react";
-import styled from "styled-components";
-import { Container, Row, Col } from "react-bootstrap";
-import Sidebar from "../../Components/Sidebar";
-import PortfolioShowcase from "../../Components/PortfolioShowcase";
+import { Col, Container, Row } from "react-bootstrap";
 import Footer from "../../Components/Footer";
+import PortfolioShowcase from "../../Components/PortfolioShowcase";
+import Sidebar from "../../Components/Sidebar";
 
 // Should be a container for all pages
 
 const Landing = () => {
   return (
-    <Container fluid style={{ padding: 0, margin:0, maxWidth:'100vw' }}>
+    <Container fluid style={{ padding: 0, margin: 0, maxWidth: "100vw" }}>
       <Row noGutters>
         <Col xs={2}>
           <Sidebar />

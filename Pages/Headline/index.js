@@ -1,13 +1,11 @@
 import React from "react";
-import styled from "styled-components";
 import {
-  Container as UnstyledContainer,
-  Row as UnstyledRow,
-  Col,
+  Container as UnstyledContainer
 } from "react-bootstrap";
-
 import { Timeline, Tween } from "react-gsap";
 import { Controller, Scene } from "react-scrollmagic";
+import styled from "styled-components";
+
 
 const wordsArray = [
   "I'm",
@@ -44,7 +42,7 @@ const Headline = () => {
               <Statement>
                 {wordsArray.map((word, index) => (
                   <Tween
-                  key={`portfoli-headline-${index}`}
+                    key={`portfoli-headline-${index}`}
                     from={{ opacity: 1 }}
                     to={{
                       x: "8vw",
@@ -100,10 +98,10 @@ const PageWrapper = styled.div`
   height: 100vh;
   padding: 0;
   margin: 0;
-  max-width:100vw;
+  max-width: 100vw;
   width: 100vw;
   position: relative;
-  overflow:hidden;
+  overflow: hidden;
 `;
 
 const Attention = styled.span`
@@ -148,7 +146,7 @@ const Word = styled.div`
   text-align: center;
   display: inline-block;
   margin-right: 4px;
-  user-select:none;
+  user-select: none;
 `;
 
 export default Headline;

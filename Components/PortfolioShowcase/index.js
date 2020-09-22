@@ -1,10 +1,9 @@
 import React from "react";
+import { Col, Row } from "react-bootstrap";
 import styled from "styled-components";
-import { Container, Row, Col } from "react-bootstrap";
-import AppPreviewSlider from "../../Components/Slider/AppPreviewSlider";
-import Skills from "../../Components/Skills";
-import { GIOVENTINO } from "../../../../core/routes/routes";
 import * as ROUTES from "../../../../core/routes/routes";
+import Skills from "../../Components/Skills";
+import AppPreviewSlider from "../../Components/Slider/AppPreviewSlider";
 const borderColor = "#ff6f61";
 
 const GIOVENTINO_IMAGES = [

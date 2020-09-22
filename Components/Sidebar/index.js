@@ -1,6 +1,6 @@
 import React from "react";
-import Navbar from "../../Components/Navigation/ProfileSideNavbar";
 import styled from "styled-components";
+import Navbar from "../../Components/Navigation/ProfileSideNavbar";
 
 const borderColor = "#ff6f61";
 

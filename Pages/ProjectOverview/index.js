@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import styled, { keyframes } from "styled-components";
-import { getProjectData } from "../../Data";
-import "../../Animations/animations.css";
+import React from "react";
 import { useHistory } from "react-router";
+import styled from "styled-components";
+import "../../Animations/animations.css";
+import { getProjectData } from "../../Data";
 
 const ProjectOverview = ({ id = "", toggleShowProject = (f) => f }) => {
   const { name, url, technologies, description, imgUrl } = getProjectData(id);
@@ -19,11 +19,11 @@ const ProjectOverview = ({ id = "", toggleShowProject = (f) => f }) => {
       <Section>
         <ServicesContainer>
           <b>TECHNOLOGIES</b>
-          {technologies.map((technology) => (
-            <>
+          {technologies.map((technology, index) => (
+            <React.Fragment key={`project-overview-${index}`}>
               <br />
               {technology}
-            </>
+            </React.Fragment>
           ))}
           <br />
           Test

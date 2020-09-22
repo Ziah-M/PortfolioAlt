@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { Container as UnstyledContainer, Row, Col } from "react-bootstrap";
 import ContactForm from "./ContactForm";
 
 const Contact = () => {

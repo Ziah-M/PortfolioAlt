@@ -1,10 +1,18 @@
 import React from "react";
-import { Navbar, Nav } from "react-bootstrap";
-import styled from 'styled-components'
+import { Nav, Navbar } from "react-bootstrap";
+import styled from "styled-components";
 
 const TasteNavbar = () => {
   return (
-    <Navbar style={{background:'rgba(0,0,0,0.9)', color:'white', position:'sticky', top:'0', left:'0'}}>
+    <Navbar
+      style={{
+        background: "rgba(0,0,0,0.9)",
+        color: "white",
+        position: "sticky",
+        top: "0",
+        left: "0",
+      }}
+    >
       <Navbar.Brand />
       <StyledNavLink>Home</StyledNavLink>
       <StyledNavLink>About</StyledNavLink>
@@ -18,7 +26,7 @@ const TasteNavbar = () => {
 };
 
 const StyledNavLink = styled(Nav.Link)`
-color:white;
-`
+  color: white;
+`;
 
 export default TasteNavbar;

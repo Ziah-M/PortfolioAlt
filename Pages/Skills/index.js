@@ -1,6 +1,6 @@
 import React from "react";
+import { Container as UnstyledContainer } from "react-bootstrap";
 import styled from "styled-components";
-import { Container as UnstyledContainer, Row, Col } from "react-bootstrap";
 import { getSkills } from "../../Data";
 
 const Skills = ({ skills = getSkills() }) => {
@@ -63,6 +63,7 @@ const SkillsList = styled.div`
 const SkillsHeading = styled.div`
   text-transform: uppercase;
   font-size: 20px;
+  margin-bottom: 15px;
 `;
 
 const SkillsWrapper = styled.div`

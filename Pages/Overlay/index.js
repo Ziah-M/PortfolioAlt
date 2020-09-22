@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 // Contains the components that are overlaid on the App (so appear on all pages)
 // 1. Social buttons
@@ -9,11 +9,7 @@ import React from 'react'
 //  for the theme (colors) as the yare different depending on light or dark page
 
 const Overlay = () => {
-    return (
-        <div>
-            
-        </div>
-    )
-}
+  return <div></div>;
+};
 
-export default Overlay
+export default Overlay;
