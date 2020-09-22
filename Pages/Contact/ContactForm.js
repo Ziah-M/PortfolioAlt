@@ -34,7 +34,7 @@ user-select:none;
 `
 
 const Control=styled(Form.Control)`
-margin-bottom:20px;
+margin-bottom:40px;
 background:#d2d2d2;
 font-size:12px;
 padding:20px;

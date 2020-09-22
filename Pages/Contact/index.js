@@ -5,7 +5,7 @@ import ContactForm from "./ContactForm";
 
 const Contact = () => {
   return (
-    <Wrapper id='contact'>
+    <Wrapper id="contact">
       <H1>
         Contact Me<BrightColor>.</BrightColor>
       </H1>
@@ -17,7 +17,7 @@ const Contact = () => {
 const Wrapper = styled.div`
   padding: 0;
   margin: 0;
-  max-width:100vw;
+  max-width: 100vw;
   width: 100vw;
   min-height: 80vh;
   background: #e8e8e8;
@@ -30,6 +30,7 @@ const Wrapper = styled.div`
 
 const H1 = styled.h1`
   font-size: 56px;
+  margin-bottom: 60px;
 `;
 
 const BrightColor = styled.span`
