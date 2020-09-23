@@ -25,8 +25,6 @@ const ProjectOverview = ({ id = "", toggleShowProject = (f) => f }) => {
               {technology}
             </React.Fragment>
           ))}
-          <br />
-          Test
         </ServicesContainer>
         <LaunchBtn onClick={() => history.push(url)}>
           <b>Launch Site</b>
@@ -81,8 +79,8 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: start;
-  max-width: 100vw;
-  width: 100vw;
+  max-width: 100%;
+  width: 100%;
   min-height: 100vh;
   background: #e8e8e8;
   color: black;

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import {
-  animateScroll as scroll
-} from "react-scroll";
+import "./styles.css";
+import { animateScroll as scroll } from "react-scroll";
 import { CSSTransition } from "react-transition-group";
 import styled, { ThemeProvider } from "styled-components";
 import About from "./Pages/About";
@@ -12,7 +11,6 @@ import Headline from "./Pages/Headline";
 import ProjectOverview from "./Pages/ProjectOverview";
 import Projects from "./Pages/Projects";
 import Skills from "./Pages/Skills";
-
 
 const theme = {
   goldAccent: "#deb150",
@@ -88,8 +86,8 @@ const Wrapper = styled.div`
   display: grid;
   justify-content: center;
   align-items: center;
-  max-width: 100vw;
-  width: 100vw;
+  max-width: 100%;
+  width: 100%;
   overflow-x: hidden !important;
   margin: 0;
   min-height: 100vh;
@@ -101,16 +99,10 @@ const GlobalStyles = styled.div`
   background-position: center center;
   background-attachment: fixed;
   background-color: white;
-  max-width: 100vw !important;
-  width: 100vw !important;
+  max-width: 100% !important;
+  width: 100% !important;
   margin: 0;
-
-  &&& {
-    max-width: 98.7vw;
-    width: 98.7vw;
-    margin: 0;
-    padding: 0;
-  }
+  padding: 0;
 `;
 
 export default App;

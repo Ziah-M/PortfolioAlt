@@ -75,7 +75,8 @@ const Headline = () => {
 const Wrapper = styled(UnstyledContainer)`
   padding: 0;
   margin: 0;
-  min-width: 100vw;
+  width:100%;
+  max-width:100%;
   min-height: 100vh;
   height: 100vh;
   background: #e91e63;
