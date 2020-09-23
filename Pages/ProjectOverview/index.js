@@ -3,12 +3,16 @@ import { useHistory } from "react-router";
 import styled from "styled-components";
 import "../../Animations/animations.css";
 import { getProjectData } from "../../Data";
+import { BackButton } from "../../Components";
 
 const ProjectOverview = ({ id = "", toggleShowProject = (f) => f }) => {
   const { name, url, technologies, description, imgUrl } = getProjectData(id);
   const history = useHistory();
   return (
     <Wrapper>
+      <BackButtonContainer>
+        <BackButton onClick={() => toggleShowProject("")}/>
+      </BackButtonContainer>
       <Exit onClick={() => toggleShowProject("")}>X</Exit>
       <Heading>
         <b>
@@ -94,9 +98,11 @@ const Container = styled.div`
   justify-content: center;
 `;
 
-const Heading = styled(Container)`
+const Heading = styled.div`
   font-size: 56px;
   margin-bottom: 40px;
+  text-align: center;
+  line-height: 60px;
 `;
 
 const Section = styled(Container)`
@@ -128,6 +134,14 @@ const Image = styled.img`
 const ImgWrapper = styled.div`
   width: 100%;
   margin: auto;
+`;
+
+const BackButtonContainer = styled.div`
+  position: absolute;
+  height: auto;
+  width: auto;
+  top:8vw;
+  left:8vw;
 `;
 
 export default ProjectOverview;

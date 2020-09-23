@@ -88,6 +88,10 @@ const Competencies = styled.div`
   align-items: center;
   font-size: 52px;
   font-weight: 500;
+
+  @media (max-width: 500px) {
+    font-size: 40px;
+  }
 `;
 
 export default Skills;

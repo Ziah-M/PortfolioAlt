@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./styles.css";
 import { animateScroll as scroll } from "react-scroll";
 import { CSSTransition } from "react-transition-group";
 import styled, { ThemeProvider } from "styled-components";
@@ -11,6 +10,7 @@ import Headline from "./Pages/Headline";
 import ProjectOverview from "./Pages/ProjectOverview";
 import Projects from "./Pages/Projects";
 import Skills from "./Pages/Skills";
+import "./styles.css";
 
 const theme = {
   goldAccent: "#deb150",

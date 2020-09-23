@@ -99,8 +99,8 @@ const PageWrapper = styled.div`
   height: 100vh;
   padding: 0;
   margin: 0;
-  max-width: 100vw;
-  width: 100vw;
+  max-width: 100%;
+  width: 100%;
   position: relative;
   overflow: hidden;
 `;
@@ -116,12 +116,12 @@ const Statement = styled.h1`
   width: 50%;
 
   @media (max-width: 500px) {
-    width: 90%;
+    width: 70%;
   }
 `;
 
 const TextArea = styled.div`
-  width: 100vw;
+  width: 100%;
   position: absolute;
   display: flex;
   justify-content: center;
@@ -130,7 +130,7 @@ const TextArea = styled.div`
 `;
 
 const OverlayArea = styled.div`
-  width: 100vw;
+  width: 100%;
   height: 20vh;
   display: flex;
   justify-content: center;

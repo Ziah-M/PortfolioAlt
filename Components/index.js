@@ -1,11 +1,3 @@
-import React from 'react'
+import BackButton from "./Buttons/BackButton";
 
-const index = () => {
-    return (
-        <div>
-            
-        </div>
-    )
-}
-
-export default index
+export { BackButton };

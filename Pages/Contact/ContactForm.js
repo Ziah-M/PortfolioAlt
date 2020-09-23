@@ -25,6 +25,10 @@ const ContactForm = () => {
 
 const Form = styled(UnstyledForm)`
   width: 400px;
+
+  @media (max-width:450px){
+    width:300px;
+  }
 `;
 
 const Label = styled(Form.Label)`

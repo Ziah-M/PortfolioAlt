@@ -8,7 +8,7 @@ const About = () => {
       <Heading>
         About Me<BrightColor>.</BrightColor>
       </Heading>
-      <Container fluid>
+      <Container>
         <Overview>overview here</Overview>
         <Details>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat
@@ -30,7 +30,7 @@ const About = () => {
 };
 
 const Wrapper = styled(UnstyledContainer)`
-  padding: 0;
+  padding: 40px 40px;
   margin: 0;
   max-width: 100%;
   width: 100%;
@@ -44,9 +44,9 @@ const Wrapper = styled(UnstyledContainer)`
 `;
 
 const Heading = styled.h1`
-font-size:56px; 
-color:white;
-text-align-center;
+  font-size: 56px;
+  color: white;
+  text-align: center;
 `;
 
 const BrightColor = styled.span`
@@ -54,7 +54,7 @@ const BrightColor = styled.span`
   margin: 20px 0;
 `;
 
-const Container = styled(UnstyledContainer)`
+const Container = styled.div`
   margin: 20px;
   display: flex;
   flex-wrap: wrap;

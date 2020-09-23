@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import {
   Container as UnstyledContainer,
-  Row as UnstyledRow
+  Row as UnstyledRow,
 } from "react-bootstrap";
 import { Timeline, Tween } from "react-gsap";
 import { Link as UnstyledLink } from "react-scroll";
@@ -13,7 +13,7 @@ import { getName } from "../../Data";
 const Cover = ({ handleScroll = (f) => f }) => {
   const { first, last } = getName();
   return (
-    <Wrapper>
+    <Wrapper id='home'>
       <Timeline
         labels={[
           {
@@ -89,22 +89,22 @@ const Cover = ({ handleScroll = (f) => f }) => {
                   spy={true}
                   smooth={true}
                   offset={-50}
-                  duration={700}
+                  duration={3000}
                 >
                   About
-                </Link>{" "}
+                </Link>
                 &nbsp;
-                <BrightColor>/</BrightColor>&nbsp;{" "}
+                <BrightColor>/</BrightColor>&nbsp;
                 <Link
                   activeClass="active"
                   to="projects"
                   spy={true}
                   smooth={true}
                   offset={-50}
-                  duration={700}
+                  duration={2000}
                 >
                   Projects
-                </Link>{" "}
+                </Link>
                 &nbsp; <BrightColor>/</BrightColor> &nbsp;
                 <Link
                   activeClass="active"
@@ -112,7 +112,7 @@ const Cover = ({ handleScroll = (f) => f }) => {
                   spy={true}
                   smooth={true}
                   offset={-50}
-                  duration={700}
+                  duration={2500}
                 >
                   Contact
                 </Link>
@@ -122,7 +122,7 @@ const Cover = ({ handleScroll = (f) => f }) => {
         </Tween>
         <Tween
           from={{ y: 0 }}
-          to={{ y: -50 }}
+          to={{ y: "-5vh" }}
           duration={2}
           repeat={-1}
           yoyo
@@ -243,7 +243,7 @@ const IconContainer = styled.div`
   height: auto;
   text-align: center;
   position: absolute;
-  bottom: 5vh;
+  bottom: 3vh;
   left: 50%;
   transform: translate(-50%);
 `;
