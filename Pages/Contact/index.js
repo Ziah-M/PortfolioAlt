@@ -19,7 +19,12 @@ const Wrapper = styled.div`
   max-width: 100%;
   width: 100%;
   min-height: 80vh;
-  background: #e8e8e8;
+  background: rgb(207, 217, 223);
+  background: linear-gradient(
+    90deg,
+    rgba(207, 217, 223, 1) 0%,
+    rgba(226, 235, 240, 1) 100%
+  );
   color: black;
   display: flex;
   flex-direction: column;

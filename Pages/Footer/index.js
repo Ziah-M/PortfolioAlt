@@ -57,7 +57,8 @@ const Wrapper = styled(UnstyledContainer)`
   max-width: 100%;
   width: 100%;
   min-height: 15vh;
-  background: white;
+  background: rgb(253,251,251);
+background: linear-gradient(90deg, rgba(253,251,251,1) 0%, rgba(235,237,238,1) 100%);
   color: slategray;
   display: flex;
   justify-content: center;

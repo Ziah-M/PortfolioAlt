@@ -13,7 +13,7 @@ import { getName } from "../../Data";
 const Cover = ({ handleScroll = (f) => f }) => {
   const { first, last } = getName();
   return (
-    <Wrapper id='home'>
+    <Wrapper id="home">
       <Timeline
         labels={[
           {
@@ -186,7 +186,9 @@ const Wrapper = styled(UnstyledContainer)`
   max-width: 100%;
   width: 100%;
   min-height: 100vh;
-  background: black;
+  /* background: black; */
+  background-color: #000000;
+  background-image: linear-gradient(315deg, #000000 0%, #7f8c8d 74%);
   color: white;
   display: flex;
   justify-content: center;

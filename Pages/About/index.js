@@ -11,18 +11,10 @@ const About = () => {
       <Container>
         <Overview>overview here</Overview>
         <Details>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat
-          numquam a animi assumenda velit labore unde fugit, pariatur, cum
-          voluptates eos harum ad ducimus inventore nihil saepe ipsum
-          distinctio, tenetur amet enim illo debitis quasi dicta quae! Id
-          aperiam pariatur explicabo obcaecati error esse, neque accusantium
-          tempore hic incidunt! Optio, natus excepturi! Maiores mollitia quam
-          molestias tempore aperiam modi. Sint odio, repellat esse,
-          necessitatibus ratione consequatur, similique obcaecati beatae culpa
-          vel minima fugiat voluptatem? Tenetur, accusantium ea. Eius veniam,
-          molestias alias odit laboriosam harum labore libero facilis modi
-          delectus quae nulla possimus architecto inventore commodi. Placeat
-          delectus dolor similique culpa.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas
+          corporis delectus, nobis dolorem esse eveniet odit libero cupiditate
+          voluptates quas explicabo placeat, sit assumenda ex amet nihil,
+          consectetur optio quod!
         </Details>
       </Container>
     </Wrapper>
@@ -35,7 +27,8 @@ const Wrapper = styled(UnstyledContainer)`
   max-width: 100%;
   width: 100%;
   min-height: 75vh;
-  background: black;
+  background-color: #000000;
+  background-image: linear-gradient(147deg, #000000 0%, #434343 74%);
   color: white;
   display: flex;
   flex-direction: column;
