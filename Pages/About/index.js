@@ -1,38 +1,31 @@
 import React from "react";
 import { Container as UnstyledContainer } from "react-bootstrap";
 import styled from "styled-components";
+import { getAbout } from "../../Data";
 
-const About = () => {
+const About = ({ about = getAbout() }) => {
   return (
     <Wrapper id="about">
       <Heading>
         About Me<BrightColor>.</BrightColor>
       </Heading>
-      <Container>
-        <Overview>overview here</Overview>
-        <Details>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas
-          corporis delectus, nobis dolorem esse eveniet odit libero cupiditate
-          voluptates quas explicabo placeat, sit assumenda ex amet nihil,
-          consectetur optio quod!
-        </Details>
-      </Container>
+        <Details>{about}</Details>
     </Wrapper>
   );
 };
 
-const Wrapper = styled(UnstyledContainer)`
-  padding: 40px 40px;
+const Wrapper = styled.div`
+  padding: 80px 0;
   margin: 0;
+  height:100%;
   max-width: 100%;
   width: 100%;
-  min-height: 75vh;
   background-color: #000000;
   background-image: linear-gradient(147deg, #000000 0%, #434343 74%);
   color: white;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
 `;
 
@@ -44,30 +37,12 @@ const Heading = styled.h1`
 
 const BrightColor = styled.span`
   color: #e91e63;
-  margin: 20px 0;
-`;
-
-const Container = styled.div`
-  margin: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-`;
-
-const Overview = styled.div`
-  width: 400px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  margin: 25px auto auto auto;
 `;
 
 const Details = styled.div`
-  width: 60%;
-  margin: auto auto auto 25px;
-  text-align: center;
+padding:60px 60px 0 60px;
+  width: 100%;
+  height:100%;
 `;
 
 export default About;

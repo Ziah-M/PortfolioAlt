@@ -14,11 +14,10 @@ const Contact = () => {
 };
 
 const Wrapper = styled.div`
-  padding: 0;
-  margin: 0;
+  padding: 80px 0;
+  margin: 0 0;
   max-width: 100%;
   width: 100%;
-  min-height: 80vh;
   background: rgb(207, 217, 223);
   background: linear-gradient(
     90deg,
@@ -28,7 +27,7 @@ const Wrapper = styled.div`
   color: black;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
 `;
 

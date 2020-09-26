@@ -10,6 +10,7 @@ import Headline from "./Pages/Headline";
 import ProjectOverview from "./Pages/ProjectOverview";
 import Projects from "./Pages/Projects";
 import Skills from "./Pages/Skills";
+import AboutContact from "./Pages/AboutContact";
 import "./styles.css";
 
 const theme = {
@@ -58,8 +59,7 @@ const App = () => {
               <Headline />
               <Projects toggleShowProject={toggleShowProject} />
               <Skills />
-              <About />
-              <Contact />
+              <AboutContact />
               <Footer />
             </>
           )}

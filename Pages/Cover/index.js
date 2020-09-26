@@ -85,13 +85,13 @@ const Cover = ({ handleScroll = (f) => f }) => {
               <Row>
                 <Link
                   activeClass="active"
-                  to="about"
+                  to="skills"
                   spy={true}
                   smooth={true}
                   offset={-50}
                   duration={3000}
                 >
-                  About
+                  Skills
                 </Link>
                 &nbsp;
                 <BrightColor>/</BrightColor>&nbsp;

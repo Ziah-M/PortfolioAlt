@@ -18,13 +18,13 @@ const Footer = () => {
       </Link>
       <Link
         activeClass="active"
-        to="about"
+        to="skills"
         spy={true}
         smooth={true}
         offset={-50}
         duration={500}
       >
-        ABOUT
+        SKILLS
       </Link>
       <Copyright>&copy; 2020</Copyright>
       <Link

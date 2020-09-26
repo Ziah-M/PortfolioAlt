@@ -72,4 +72,11 @@ export const getName = () => ({
   last: "Mayne",
 });
 
+export const ABOUT = `
+Hi, I'm ${
+  getName().first
+} and I'm a front-end web developer. I love working with HTML, CSS, JavaScript and the React framework and ecosystem, to solve problems and create aesthetic, responsive, and performant modern web applications that delight users. My goal is to become better every day in all the intricacies of web development, and to learn new technologies, on the path to becoming a full-stack engineer.`;
+
 export const getSkills = () => SKILLS;
+
+export const getAbout = () => ABOUT;

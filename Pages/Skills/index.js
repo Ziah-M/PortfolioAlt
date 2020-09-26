@@ -5,7 +5,7 @@ import { getSkills } from "../../Data";
 
 const Skills = ({ skills = getSkills() }) => {
   return (
-    <Wrapper fluid>
+    <Wrapper fluid id='skills'>
       <Inner>
         <Competencies>COMPETENCIES</Competencies>
         <br />
