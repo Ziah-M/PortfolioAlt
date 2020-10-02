@@ -1,49 +1,49 @@
-import { faAngleDoubleDown } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
+import { faAngleDoubleDown } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import React from 'react'
 import {
   Container as UnstyledContainer,
   Row as UnstyledRow,
-} from "react-bootstrap";
-import { Timeline, Tween } from "react-gsap";
-import { Link as UnstyledLink } from "react-scroll";
-import styled from "styled-components";
-import { getName } from "../../Data";
+} from 'react-bootstrap'
+import { Timeline, Tween } from 'react-gsap'
+import { Link as UnstyledLink } from 'react-scroll'
+import styled from 'styled-components'
+import { getName } from '../../Data'
 
 const Cover = ({ handleScroll = (f) => f }) => {
-  const { first, last } = getName();
+  const { first, last } = getName()
   return (
     <Wrapper id="home">
       <Timeline
         labels={[
           {
-            label: "start",
+            label: 'start',
             position: 0,
           },
           {
-            label: "start-name",
-            position: "start+=1",
+            label: 'start-name',
+            position: 'start+=1',
           },
           {
-            label: "start-tagline",
-            position: "start+=1.8",
+            label: 'start-tagline',
+            position: 'start+=1.8',
           },
         ]}
       >
         <ForegroundCenteredContainer>
           <Container
             style={{
-              height: "300px",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
+              height: '300px',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
             }}
           >
             <Tween
-              from={{ filter: "blur(200px)" }}
-              to={{ filter: "blur(0px)" }}
+              from={{ filter: 'blur(200px)' }}
+              to={{ filter: 'blur(0px)' }}
               duration={1}
-              position={"start-name"}
+              position="start-name"
             >
               <Row>
                 <Name>
@@ -53,10 +53,10 @@ const Cover = ({ handleScroll = (f) => f }) => {
             </Tween>
             <Row>
               <Tween
-                from={{ filter: "blur(200px)", scale: 0.1 }}
-                to={{ filter: "blur(0px)", scale: 1 }}
+                from={{ filter: 'blur(200px)', scale: 0.1 }}
+                to={{ filter: 'blur(0px)', scale: 1 }}
                 duration={1}
-                position={"start-tagline"}
+                position="start-tagline"
               >
                 <Tagline>
                   Software developer <br />
@@ -67,10 +67,10 @@ const Cover = ({ handleScroll = (f) => f }) => {
           </Container>
         </ForegroundCenteredContainer>
         <Tween
-          from={{ filter: "blur(200px)" }}
-          to={{ filter: "blur(0px)" }}
+          from={{ filter: 'blur(200px)' }}
+          to={{ filter: 'blur(0px)' }}
           duration={2}
-          position={"start"}
+          position="start"
         >
           <CenteredContainer>
             <Container>
@@ -86,8 +86,8 @@ const Cover = ({ handleScroll = (f) => f }) => {
                 <Link
                   activeClass="active"
                   to="skills"
-                  spy={true}
-                  smooth={true}
+                  spy
+                  smooth
                   offset={-50}
                   duration={3000}
                 >
@@ -98,8 +98,8 @@ const Cover = ({ handleScroll = (f) => f }) => {
                 <Link
                   activeClass="active"
                   to="projects"
-                  spy={true}
-                  smooth={true}
+                  spy
+                  smooth
                   offset={-50}
                   duration={2000}
                 >
@@ -109,8 +109,8 @@ const Cover = ({ handleScroll = (f) => f }) => {
                 <Link
                   activeClass="active"
                   to="contact"
-                  spy={true}
-                  smooth={true}
+                  spy
+                  smooth
                   offset={-50}
                   duration={2500}
                 >
@@ -122,11 +122,11 @@ const Cover = ({ handleScroll = (f) => f }) => {
         </Tween>
         <Tween
           from={{ y: 0 }}
-          to={{ y: "-5vh" }}
+          to={{ y: '-5vh' }}
           duration={2}
           repeat={-1}
           yoyo
-          position={"start"}
+          position="start"
         >
           <IconContainer>
             <Scroll>Scroll</Scroll>
@@ -135,8 +135,8 @@ const Cover = ({ handleScroll = (f) => f }) => {
         </Tween>
       </Timeline>
     </Wrapper>
-  );
-};
+  )
+}
 
 const CenteredContainer = styled.div`
   padding: 0;
@@ -151,11 +151,11 @@ const CenteredContainer = styled.div`
 
   @media (max-width: 400px) {
   }
-`;
+`
 
 const ForegroundCenteredContainer = styled(CenteredContainer)`
   z-index: 10;
-`;
+`
 
 const Name = styled.h1`
   color: white;
@@ -165,7 +165,7 @@ const Name = styled.h1`
   @media (max-width: 400px) {
     font-size: 50px;
   }
-`;
+`
 
 const Tagline = styled.h6`
   color: lightgray;
@@ -174,11 +174,11 @@ const Tagline = styled.h6`
   @media (max-width: 400px) {
     font-size: 14px;
   }
-`;
+`
 
 const BrightColor = styled.span`
   color: #e91e63;
-`;
+`
 
 const Wrapper = styled(UnstyledContainer)`
   padding: 0;
@@ -193,16 +193,16 @@ const Wrapper = styled(UnstyledContainer)`
   display: flex;
   justify-content: center;
   align-items: center;
-`;
+`
 
 const Row = styled(UnstyledRow)`
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-`;
+`
 
-const Container = styled(UnstyledContainer)``;
+const Container = styled(UnstyledContainer)``
 
 const Logo = styled.div`
   color: #e91e63;
@@ -217,11 +217,11 @@ const Logo = styled.div`
   justify-content: center;
   align-items: center;
   user-select: none;
-`;
+`
 
 const Initials = styled.span`
   user-select: none;
-`;
+`
 
 const Link = styled(UnstyledLink)`
   cursor: pointer;
@@ -230,13 +230,13 @@ const Link = styled(UnstyledLink)`
   &:hover {
     color: lightsteelblue !important;
   }
-`;
+`
 
 const Scroll = styled.div`
   font-size: 20px;
-`;
+`
 
-const Icon = styled(FontAwesomeIcon)``;
+const Icon = styled(FontAwesomeIcon)``
 
 const IconContainer = styled.div`
   color: orange;
@@ -248,6 +248,6 @@ const IconContainer = styled.div`
   bottom: 3vh;
   left: 50%;
   transform: translate(-50%);
-`;
+`
 
-export default Cover;
+export default Cover

@@ -1,17 +1,15 @@
-import React from "react";
-import styled from "styled-components";
-import ContactForm from "./ContactForm";
+import React from 'react'
+import styled from 'styled-components'
+import ContactForm from './ContactForm'
 
-const Contact = () => {
-  return (
-    <Wrapper id="contact">
-      <H1>
-        Contact Me<BrightColor>.</BrightColor>
-      </H1>
-      <ContactForm />
-    </Wrapper>
-  );
-};
+const Contact = () => (
+  <Wrapper id="contact">
+    <H1>
+      Contact Me<BrightColor>.</BrightColor>
+    </H1>
+    <ContactForm />
+  </Wrapper>
+)
 
 const Wrapper = styled.div`
   padding: 80px 0;
@@ -29,15 +27,15 @@ const Wrapper = styled.div`
   flex-direction: column;
   justify-content: start;
   align-items: center;
-`;
+`
 
 const H1 = styled.h1`
   font-size: 56px;
   margin-bottom: 60px;
-`;
+`
 
 const BrightColor = styled.span`
   color: #e91e63;
-`;
+`
 
-export default Contact;
+export default Contact

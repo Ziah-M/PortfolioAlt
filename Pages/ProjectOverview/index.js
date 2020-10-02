@@ -1,19 +1,19 @@
-import React from "react";
-import { useHistory } from "react-router";
-import styled from "styled-components";
-import "../../Animations/animations.css";
-import { getProjectData } from "../../Data";
-import { BackButton } from "../../Components";
+import React from 'react'
+import { useHistory } from 'react-router'
+import styled from 'styled-components'
+import '../../Animations/animations.css'
+import { getProjectData } from '../../Data'
+import { BackButton } from '../../Components'
 
-const ProjectOverview = ({ id = "", toggleShowProject = (f) => f }) => {
-  const { name, url, technologies, description, imgUrl } = getProjectData(id);
-  const history = useHistory();
+const ProjectOverview = ({ id = '', toggleShowProject = (f) => f }) => {
+  const { name, url, technologies, description, imgUrl } = getProjectData(id)
+  const history = useHistory()
   return (
     <Wrapper>
       <BackButtonContainer>
-        <BackButton onClick={() => toggleShowProject("")}/>
+        <BackButton onClick={() => toggleShowProject('')} />
       </BackButtonContainer>
-      <Exit onClick={() => toggleShowProject("")}>X</Exit>
+      <Exit onClick={() => toggleShowProject('')}>X</Exit>
       <Heading>
         <b>
           {name}
@@ -41,8 +41,8 @@ const ProjectOverview = ({ id = "", toggleShowProject = (f) => f }) => {
         </ImgWrapper>
       </ImageSection>
     </Wrapper>
-  );
-};
+  )
+}
 
 const Exit = styled.div`
   font-size: 18px;
@@ -53,16 +53,16 @@ const Exit = styled.div`
   &:hover {
     color: red;
   }
-`;
+`
 
 const ColoredSpan = styled.span`
   color: #e91e63;
-`;
+`
 
 const ServicesContainer = styled.div`
   max-width: 100px;
   font-size: 12px;
-`;
+`
 
 const LaunchBtn = styled.button`
   border: 2px solid #e91e63;
@@ -76,7 +76,7 @@ const LaunchBtn = styled.button`
     color: white;
     background: #e91e63;
   }
-`;
+`
 
 const Wrapper = styled.div`
   display: flex;
@@ -89,31 +89,31 @@ const Wrapper = styled.div`
   background: #e8e8e8;
   color: black;
   padding: 10% 15%;
-`;
+`
 
 const Container = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-`;
+`
 
 const Heading = styled.div`
   font-size: 56px;
   margin-bottom: 40px;
   text-align: center;
   line-height: 60px;
-`;
+`
 
 const Section = styled(Container)`
   margin-bottom: 40px;
   display: flex;
   justify-content: space-around;
-`;
+`
 
 const Description = styled(Container)`
   margin-bottom: 40px;
-`;
+`
 
 const ImageSection = styled(Container)`
   display: flex;
@@ -122,26 +122,26 @@ const ImageSection = styled(Container)`
   background: white;
   border-radius: 8px;
   padding: 20px;
-`;
+`
 
 const Image = styled.img`
   width: 100%;
   max-width: 80vw;
   height: auto;
   margin: auto;
-`;
+`
 
 const ImgWrapper = styled.div`
   width: 100%;
   margin: auto;
-`;
+`
 
 const BackButtonContainer = styled.div`
   position: absolute;
   height: auto;
   width: auto;
-  top:8vw;
-  left:8vw;
-`;
+  top: 8vw;
+  left: 8vw;
+`
 
-export default ProjectOverview;
+export default ProjectOverview

@@ -1,55 +1,53 @@
-import React from "react";
-import { Container as UnstyledContainer } from "react-bootstrap";
-import styled from "styled-components";
-import { Link as UnstyledLink } from "react-scroll";
+import React from 'react'
+import { Container as UnstyledContainer } from 'react-bootstrap'
+import styled from 'styled-components'
+import { Link as UnstyledLink } from 'react-scroll'
 
-const Footer = () => {
-  return (
-    <Wrapper>
-      <Link
-        activeClass="active"
-        to="home"
-        spy={true}
-        smooth={true}
-        offset={-50}
-        duration={2000}
-      >
-        HOME
-      </Link>
-      <Link
-        activeClass="active"
-        to="skills"
-        spy={true}
-        smooth={true}
-        offset={-50}
-        duration={500}
-      >
-        SKILLS
-      </Link>
-      <Copyright>&copy; 2020</Copyright>
-      <Link
-        activeClass="active"
-        to="projects"
-        spy={true}
-        smooth={true}
-        offset={-50}
-        duration={1000}
-      >
-        PROJECTS
-      </Link>
-      <Link
-        activeClass="active"
-        to="contact"
-        spy={true}
-        smooth={true}
-        offset={-50}
-        duration={100}
-      >
-        CONTACT
-      </Link>
-    </Wrapper>
-  );
-};
+const Footer = () => (
+  <Wrapper>
+    <Link
+      activeClass="active"
+      to="home"
+      spy
+      smooth
+      offset={-50}
+      duration={2000}
+    >
+      HOME
+    </Link>
+    <Link
+      activeClass="active"
+      to="skills"
+      spy
+      smooth
+      offset={-50}
+      duration={500}
+    >
+      SKILLS
+    </Link>
+    <Copyright>&copy; 2020</Copyright>
+    <Link
+      activeClass="active"
+      to="projects"
+      spy
+      smooth
+      offset={-50}
+      duration={1000}
+    >
+      PROJECTS
+    </Link>
+    <Link
+      activeClass="active"
+      to="contact"
+      spy
+      smooth
+      offset={-50}
+      duration={100}
+    >
+      CONTACT
+    </Link>
+  </Wrapper>
+)
 
 const Wrapper = styled(UnstyledContainer)`
   padding: 0;
@@ -57,13 +55,17 @@ const Wrapper = styled(UnstyledContainer)`
   max-width: 100%;
   width: 100%;
   min-height: 15vh;
-  background: rgb(253,251,251);
-background: linear-gradient(90deg, rgba(253,251,251,1) 0%, rgba(235,237,238,1) 100%);
+  background: rgb(253, 251, 251);
+  background: linear-gradient(
+    90deg,
+    rgba(253, 251, 251, 1) 0%,
+    rgba(235, 237, 238, 1) 100%
+  );
   color: slategray;
   display: flex;
   justify-content: center;
   align-items: center;
-`;
+`
 
 const Link = styled(UnstyledLink)`
   text-transform: uppercase;
@@ -79,7 +81,7 @@ const Link = styled(UnstyledLink)`
   @media (max-width: 600px) {
     margin: 0 5px;
   }
-`;
+`
 
 const Copyright = styled.div`
   margin: 0px 40px;
@@ -88,6 +90,6 @@ const Copyright = styled.div`
   @media (max-width: 600px) {
     margin: 0 12px;
   }
-`;
+`
 
-export default Footer;
+export default Footer

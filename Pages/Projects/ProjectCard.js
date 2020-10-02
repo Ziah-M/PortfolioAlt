@@ -1,18 +1,15 @@
-import React from "react";
-import {
-  Container as UnstyledContainer
-} from "react-bootstrap";
-import styled from "styled-components";
-import { getProjectData } from "../../Data";
-
+import React from 'react'
+import { Container as UnstyledContainer } from 'react-bootstrap'
+import styled from 'styled-components'
+import { getProjectData } from '../../Data'
 
 const ProjectCard = ({
   toggleShowProject = (f) => f,
-  projectId = "default",
+  projectId = 'default',
 }) => {
   const { name, url, technologies, description, imgUrl } = getProjectData(
-    projectId
-  );
+    projectId,
+  )
   return (
     <Wrapper onClick={() => toggleShowProject(projectId)}>
       <Image src={imgUrl} />
@@ -20,8 +17,8 @@ const ProjectCard = ({
       <HiddenButton>Learn More</HiddenButton>
       <DarkOverlay />
     </Wrapper>
-  );
-};
+  )
+}
 
 const Wrapper = styled(UnstyledContainer)`
   margin: 5vw;
@@ -48,12 +45,12 @@ const Wrapper = styled(UnstyledContainer)`
     padding: 0;
   }
   position: relative;
-`;
+`
 
 const Title = styled.div`
   margin: 10px auto;
   font-weight: 500;
-`;
+`
 
 const DarkOverlay = styled.div`
   position: absolute;
@@ -68,7 +65,7 @@ const DarkOverlay = styled.div`
   ${Wrapper}:hover & {
     display: block;
   }
-`;
+`
 
 const HiddenButton = styled.button`
   position: absolute;
@@ -95,7 +92,7 @@ const HiddenButton = styled.button`
   ${Wrapper}:hover & {
     display: block;
   }
-`;
+`
 
 const Image = styled.img`
   width: 220px;
@@ -107,8 +104,7 @@ const Image = styled.img`
     width: 100%;
     height: 100%;
   }
-`;
+`
 
-export default ProjectCard;
-export { ProjectCard };
-
+export default ProjectCard
+export { ProjectCard }

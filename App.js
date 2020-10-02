@@ -1,52 +1,52 @@
-import React, { useState } from "react";
-import { animateScroll as scroll } from "react-scroll";
-import { CSSTransition } from "react-transition-group";
-import styled, { ThemeProvider } from "styled-components";
-import About from "./Pages/About";
-import Contact from "./Pages/Contact";
-import Cover from "./Pages/Cover";
-import Footer from "./Pages/Footer";
-import Headline from "./Pages/Headline";
-import ProjectOverview from "./Pages/ProjectOverview";
-import Projects from "./Pages/Projects";
-import Skills from "./Pages/Skills";
-import AboutContact from "./Pages/AboutContact";
-import "./styles.css";
+import React, { useState } from 'react'
+import { animateScroll as scroll } from 'react-scroll'
+import { CSSTransition } from 'react-transition-group'
+import styled, { ThemeProvider } from 'styled-components'
+import About from './Pages/About'
+import Contact from './Pages/Contact'
+import Cover from './Pages/Cover'
+import Footer from './Pages/Footer'
+import Headline from './Pages/Headline'
+import ProjectOverview from './Pages/ProjectOverview'
+import Projects from './Pages/Projects'
+import Skills from './Pages/Skills'
+import AboutContact from './Pages/AboutContact'
+import './styles.css'
 
 const theme = {
-  goldAccent: "#deb150",
-  whiteText: "white",
-  blackText: "black",
-  dark: "black",
-  brightBg: "#e91e63",
-  veryLightGray: "#e8e8e8",
-};
+  goldAccent: '#deb150',
+  whiteText: 'white',
+  blackText: 'black',
+  dark: 'black',
+  brightBg: '#e91e63',
+  veryLightGray: '#e8e8e8',
+}
 
 const App = () => {
-  const [showProject, setShowProject] = useState(false);
-  const [activeProject, setActiveProject] = useState("");
-  const [showLanding, setShowLanding] = useState(true);
+  const [showProject, setShowProject] = useState(false)
+  const [activeProject, setActiveProject] = useState('')
+  const [showLanding, setShowLanding] = useState(true)
 
   const toggleShowProject = (projectName) => {
-    if (projectName === "") {
-      setShowProject(false);
-      setActiveProject(projectName);
-      setShowLanding(true);
+    if (projectName === '') {
+      setShowProject(false)
+      setActiveProject(projectName)
+      setShowLanding(true)
     } else {
-      setShowProject(true);
-      setActiveProject(projectName);
-      setShowLanding(false);
+      setShowProject(true)
+      setActiveProject(projectName)
+      setShowLanding(false)
     }
-  };
+  }
 
   const closeProject = () => {
-    setShowProject(false);
-  };
+    setShowProject(false)
+  }
 
   const closeLanding = () => {
-    setShowLanding(false);
-    scroll.scrollToTop();
-  };
+    setShowLanding(false)
+    scroll.scrollToTop()
+  }
 
   return (
     <GlobalStyles>
@@ -79,8 +79,8 @@ const App = () => {
         </Wrapper>
       </ThemeProvider>
     </GlobalStyles>
-  );
-};
+  )
+}
 
 const Wrapper = styled.div`
   display: grid;
@@ -92,7 +92,7 @@ const Wrapper = styled.div`
   margin: 0;
   min-height: 100vh;
   background: #e91e63;
-`;
+`
 
 const GlobalStyles = styled.div`
   background-size: cover;
@@ -103,6 +103,6 @@ const GlobalStyles = styled.div`
   width: 100% !important;
   margin: 0;
   padding: 0;
-`;
+`
 
-export default App;
+export default App
