@@ -9,132 +9,137 @@ import { Timeline, Tween } from 'react-gsap'
 import { Link as UnstyledLink } from 'react-scroll'
 import styled from 'styled-components'
 import { getName } from '../../Data'
+import { VideoBackground } from '../../Components'
+import { VimeoBackground } from '../../Components'
 
 const Cover = ({ handleScroll = (f) => f }) => {
   const { first, last } = getName()
   return (
-    <Wrapper id="home">
-      <Timeline
-        labels={[
-          {
-            label: 'start',
-            position: 0,
-          },
-          {
-            label: 'start-name',
-            position: 'start+=1',
-          },
-          {
-            label: 'start-tagline',
-            position: 'start+=1.8',
-          },
-        ]}
-      >
-        <ForegroundCenteredContainer>
-          <Container
-            style={{
-              height: '300px',
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'center',
-            }}
-          >
-            <Tween
-              from={{ filter: 'blur(200px)' }}
-              to={{ filter: 'blur(0px)' }}
-              duration={1}
-              position="start-name"
-            >
-              <Row>
-                <Name>
-                  {first} {last}
-                </Name>
-              </Row>
-            </Tween>
-            <Row>
-              <Tween
-                from={{ filter: 'blur(200px)', scale: 0.1 }}
-                to={{ filter: 'blur(0px)', scale: 1 }}
-                duration={1}
-                position="start-tagline"
-              >
-                <Tagline>
-                  Software developer <br />
-                  specializing in frontend web development
-                </Tagline>
-              </Tween>
-            </Row>
-          </Container>
-        </ForegroundCenteredContainer>
-        <Tween
-          from={{ filter: 'blur(200px)' }}
-          to={{ filter: 'blur(0px)' }}
-          duration={2}
-          position="start"
+    <VimeoBackground>
+      <Wrapper id="home">
+        {/* <VideoBackground /> */}
+        <Timeline
+          labels={[
+            {
+              label: 'start',
+              position: 0,
+            },
+            {
+              label: 'start-name',
+              position: 'start+=1',
+            },
+            {
+              label: 'start-tagline',
+              position: 'start+=1.8',
+            },
+          ]}
         >
-          <CenteredContainer>
-            <Container>
+          <ForegroundCenteredContainer>
+            <Container
+              style={{
+                height: '300px',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center',
+              }}
+            >
+              <Tween
+                from={{ filter: 'blur(200px)' }}
+                to={{ filter: 'blur(0px)' }}
+                duration={1}
+                position="start-name"
+              >
+                <Row>
+                  <Name>
+                    {first} {last}
+                  </Name>
+                </Row>
+              </Tween>
               <Row>
-                <Logo>
-                  <Initials>
-                    {first.charAt(0)}
-                    {last.charAt(0)}
-                  </Initials>
-                </Logo>
-              </Row>
-              <Row>
-                <Link
-                  activeClass="active"
-                  to="skills"
-                  spy
-                  smooth
-                  offset={-50}
-                  duration={3000}
+                <Tween
+                  from={{ filter: 'blur(200px)', scale: 0.1 }}
+                  to={{ filter: 'blur(0px)', scale: 1 }}
+                  duration={1}
+                  position="start-tagline"
                 >
-                  Skills
-                </Link>
-                &nbsp;
-                <BrightColor>/</BrightColor>&nbsp;
-                <Link
-                  activeClass="active"
-                  to="projects"
-                  spy
-                  smooth
-                  offset={-50}
-                  duration={2000}
-                >
-                  Projects
-                </Link>
-                &nbsp; <BrightColor>/</BrightColor> &nbsp;
-                <Link
-                  activeClass="active"
-                  to="contact"
-                  spy
-                  smooth
-                  offset={-50}
-                  duration={2500}
-                >
-                  Contact
-                </Link>
+                  <Tagline>
+                    Software developer <br />
+                    specializing in frontend web development
+                  </Tagline>
+                </Tween>
               </Row>
             </Container>
-          </CenteredContainer>
-        </Tween>
-        <Tween
-          from={{ y: 0 }}
-          to={{ y: '-5vh' }}
-          duration={2}
-          repeat={-1}
-          yoyo
-          position="start"
-        >
-          <IconContainer>
-            <Scroll>Scroll</Scroll>
-            <Icon icon={faAngleDoubleDown} />
-          </IconContainer>
-        </Tween>
-      </Timeline>
-    </Wrapper>
+          </ForegroundCenteredContainer>
+          <Tween
+            from={{ filter: 'blur(200px)' }}
+            to={{ filter: 'blur(0px)' }}
+            duration={2}
+            position="start"
+          >
+            <CenteredContainer>
+              <Container>
+                <Row>
+                  <Logo>
+                    <Initials>
+                      {first.charAt(0)}
+                      {last.charAt(0)}
+                    </Initials>
+                  </Logo>
+                </Row>
+                <Row>
+                  <Link
+                    activeClass="active"
+                    to="skills"
+                    spy
+                    smooth
+                    offset={-50}
+                    duration={3000}
+                  >
+                    Skills
+                  </Link>
+                  &nbsp;
+                  <BrightColor>/</BrightColor>&nbsp;
+                  <Link
+                    activeClass="active"
+                    to="projects"
+                    spy
+                    smooth
+                    offset={-50}
+                    duration={2000}
+                  >
+                    Projects
+                  </Link>
+                  &nbsp; <BrightColor>/</BrightColor> &nbsp;
+                  <Link
+                    activeClass="active"
+                    to="contact"
+                    spy
+                    smooth
+                    offset={-50}
+                    duration={2500}
+                  >
+                    Contact
+                  </Link>
+                </Row>
+              </Container>
+            </CenteredContainer>
+          </Tween>
+          <Tween
+            from={{ y: 0 }}
+            to={{ y: '-5vh' }}
+            duration={2}
+            repeat={-1}
+            yoyo
+            position="start"
+          >
+            <IconContainer>
+              <Scroll>Scroll</Scroll>
+              <Icon icon={faAngleDoubleDown} />
+            </IconContainer>
+          </Tween>
+        </Timeline>
+      </Wrapper>
+    </VimeoBackground>
   )
 }
 
@@ -193,6 +198,8 @@ const Wrapper = styled(UnstyledContainer)`
   display: flex;
   justify-content: center;
   align-items: center;
+  pointer-events: auto;
+  user-select: none;
 `
 
 const Row = styled(UnstyledRow)`

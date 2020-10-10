@@ -1,5 +1,6 @@
 import * as ROUTES from '../../../core/routes/routes'
 import * as P from '../../../private'
+import { nameMovieSite, nameRestaurant } from '../../../private'
 
 const DEFAULT_PROJECT_DATA = {
   name: 'Default Application',
@@ -11,27 +12,38 @@ const DEFAULT_PROJECT_DATA = {
 }
 
 const GIOVENTINOS = {
-  name: 'Gioventinos',
-  url: ROUTES.GIOVENTINO,
+  name: `${nameRestaurant}`,
+  url: ROUTES.RESTAURANT,
   technologies: ['HTML5', 'CSS3', 'JavaScript', 'React', 'Bootstrap'],
   description: 'A site for a fictional pizzeria restaurant.',
-  imgUrl: 'https://i.imgur.com/hni8BNJ.jpg',
+  imgUrl: 'https://i.imgur.com/PWomAoC.jpg',
 }
 
 const MOVIES_OVERLOAD = {
-  name: 'Movie Server',
-  url: ROUTES.MOVIE_SERVER,
-  technologies: ['HTML5', 'CSS3', 'JavaScript', 'React', 'TmDB API'],
-  description: `A site for visually browsing information about movies and actors. Features include:
-  -Reviews
-  -Trailers
-  -Cast
-  -Plot Summaries
-  -Actor's work
-  -Rating movies
-  -Logging in to add movies to a 'watch' playlist
+  name: `${nameMovieSite}`,
+  url: ROUTES.MOVIES,
+  technologies: [
+    'HTML5',
+    'CSS3',
+    'JavaScript',
+    'React',
+    'Rest API consumption & Async Handling',
+  ],
+  description: `An application for browsing information on movies, actors and TV shows. It includes search, detailed information on movies and actors, reviews, trailers, cast information, rating movies, and adding to a playlist.
   `,
   imgUrl: 'https://i.imgur.com/5gVzFDC.png',
+}
+
+const BUG_TRACKER = {
+  name: 'Bug Tracker',
+  url: ROUTES.BUG_TRACKER,
+  technologies: ['HTML 5', 'CSS 3', 'JavaScript', 'React', 'Redux', 'Firebase'],
+  description: `A full-stack bug tracking and ticket management web app. 
+  This app was built with React and uses Redux with Redux thunks for state management.
+  Firebase is used for the back-end. The app comes with a demo admin-mode that simulates all CRUD operations without affecting the integrity of the data in the database.
+  The app also features user authentication, session management, and role-based authorization.
+  `,
+  imgUrl: 'https://i.imgur.com/lo89Qq7.jpg',
 }
 
 const SKILLS = {
@@ -41,7 +53,7 @@ const SKILLS = {
     'CSS 3',
     'SASS',
     'styled-components',
-    'Redux & Redux Saga',
+    'Redux & Redux Thunks',
     'Bootstrap',
     'Greensock Animation Platform',
     'Jest',
@@ -63,8 +75,9 @@ const SKILLS = {
 }
 
 export const getProjectData = (id) => {
-  if (id === 'Gioventinos') return GIOVENTINOS
-  if (id === 'Movies Overload') return MOVIES_OVERLOAD
+  if (id === `${nameRestaurant}`) return GIOVENTINOS
+  if (id === `${nameMovieSite}`) return MOVIES_OVERLOAD
+  if (id === 'Bug Tracker') return BUG_TRACKER
   return DEFAULT_PROJECT_DATA
 }
 

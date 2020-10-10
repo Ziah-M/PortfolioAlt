@@ -5,10 +5,12 @@ import {
 } from 'react-bootstrap'
 import styled from 'styled-components'
 import { ProjectCard as UnstyledProjectCard } from './ProjectCard'
+import { nameRestaurant, nameMovieSite } from '../../../../private'
 
 const DEFAULT_PROJECTS = [
-  'Gioventinos',
-  'Movies Overload',
+  'Bug Tracker',
+  `${nameMovieSite}`,
+  `${nameRestaurant}`,
   // "Organic Shop",
 ]
 
