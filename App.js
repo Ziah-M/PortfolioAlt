@@ -56,10 +56,10 @@ const App = () => {
             <>
               {/* <Navbar /> */}
               <Cover />
-              <Headline />
+              {/* <Headline />
               <Projects toggleShowProject={toggleShowProject} />
               <Skills />
-              <AboutContact />
+              <AboutContact /> */}
               <Footer />
             </>
           )}

@@ -18,16 +18,21 @@ const AboutContact = () => (
 
 const Wrapper = styled.div`
   width: 100%;
+  max-width: 100%;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
 `
 
 const Col = styled.div`
   width: 50%;
+  max-width: 50vw;
   height: auto;
 
   @media (max-width: 850px) {
     width: 100%;
+    max-width: 100vw;
   }
 `
 

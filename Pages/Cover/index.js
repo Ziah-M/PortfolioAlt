@@ -63,8 +63,17 @@ const Cover = ({ handleScroll = (f) => f }) => {
                   position="start-tagline"
                 >
                   <Tagline>
-                    Software developer <br />
-                    specializing in frontend web development
+                    <p>Hi, my name is</p>
+                    <br />
+                    Ziah Mayne
+                    <br />
+                    <h1>I build things for the web.</h1>
+                    <br />
+                    <p>
+                      I'm a front-end software engineer based in Sydney, AU
+                      specializing in building exceptional websites,
+                      applications, and everything in between.
+                    </p>
                   </Tagline>
                 </Tween>
               </Row>
