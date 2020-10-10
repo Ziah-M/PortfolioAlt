@@ -12,6 +12,7 @@ import Projects from './Pages/Projects'
 import Skills from './Pages/Skills'
 import AboutContact from './Pages/AboutContact'
 import './styles.css'
+import { Expertise, FeaturedProjects } from './Pages'
 
 const theme = {
   goldAccent: '#deb150',
@@ -55,11 +56,13 @@ const App = () => {
           {showLanding && (
             <>
               {/* <Navbar /> */}
-              <Cover />
+              {/* <Cover /> */}
               {/* <Headline />
               <Projects toggleShowProject={toggleShowProject} />
               <Skills />
               <AboutContact /> */}
+              <Expertise />
+              <FeaturedProjects />
               <Footer />
             </>
           )}
@@ -83,8 +86,9 @@ const App = () => {
 }
 
 const Wrapper = styled.div`
-  display: grid;
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
   align-items: center;
   max-width: 100%;
   width: 100%;
