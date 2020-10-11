@@ -13,6 +13,7 @@ import Skills from './Pages/Skills'
 import AboutContact from './Pages/AboutContact'
 import './styles.css'
 import { Expertise, FeaturedProjects } from './Pages'
+import { LoadingSplashScreen } from './Components'
 
 const theme = {
   goldAccent: '#deb150',
@@ -53,10 +54,11 @@ const App = () => {
     <GlobalStyles>
       <ThemeProvider theme={theme}>
         <Wrapper id="containerElement">
+          <LoadingSplashScreen />
           {showLanding && (
             <>
               {/* <Navbar /> */}
-              <Cover />
+              {/* <Cover /> */}
               {/* <Headline />
               <Projects toggleShowProject={toggleShowProject} />
               <Skills />

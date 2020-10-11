@@ -166,6 +166,7 @@ const Text = styled.div`
     font-size: 16px;
     font-weight: 400;
     font-family: 'Roboto Mono', monospace;
+    color: 		rgb(245,245,245);
   }
 `
 
