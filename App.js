@@ -1,19 +1,10 @@
-import React, { useState } from 'react'
-import { animateScroll as scroll } from 'react-scroll'
-import { CSSTransition } from 'react-transition-group'
+import React from 'react'
 import styled, { ThemeProvider } from 'styled-components'
-import About from './Pages/About'
-import Contact from './Pages/Contact'
+import { LoadingSplashScreen } from './Components'
+import { Expertise, FeaturedProjects } from './Pages'
 import Cover from './Pages/Cover'
 import Footer from './Pages/Footer'
-import Headline from './Pages/Headline'
-import ProjectOverview from './Pages/ProjectOverview'
-import Projects from './Pages/Projects'
-import Skills from './Pages/Skills'
-import AboutContact from './Pages/AboutContact'
 import './styles.css'
-import { Expertise, FeaturedProjects } from './Pages'
-import { LoadingSplashScreen } from './Components'
 
 const theme = {
   goldAccent: '#deb150',
@@ -24,68 +15,19 @@ const theme = {
   veryLightGray: '#e8e8e8',
 }
 
-const App = () => {
-  const [showProject, setShowProject] = useState(false)
-  const [activeProject, setActiveProject] = useState('')
-  const [showLanding, setShowLanding] = useState(true)
-
-  const toggleShowProject = (projectName) => {
-    if (projectName === '') {
-      setShowProject(false)
-      setActiveProject(projectName)
-      setShowLanding(true)
-    } else {
-      setShowProject(true)
-      setActiveProject(projectName)
-      setShowLanding(false)
-    }
-  }
-
-  const closeProject = () => {
-    setShowProject(false)
-  }
-
-  const closeLanding = () => {
-    setShowLanding(false)
-    scroll.scrollToTop()
-  }
-
-  return (
-    <GlobalStyles>
-      <ThemeProvider theme={theme}>
-        <Wrapper id="containerElement">
-          <LoadingSplashScreen />
-          {showLanding && (
-            <>
-              {/* <Navbar /> */}
-              {/* <Cover /> */}
-              {/* <Headline />
-              <Projects toggleShowProject={toggleShowProject} />
-              <Skills />
-              <AboutContact /> */}
-              <Expertise />
-              <FeaturedProjects />
-              <Footer />
-            </>
-          )}
-          <CSSTransition
-            in={showProject}
-            timeout={500}
-            classNames="grow"
-            unmountOnExit
-            onEnter={() => closeLanding()}
-            onExited={() => setShowLanding(true)}
-          >
-            <ProjectOverview
-              id={activeProject}
-              toggleShowProject={closeProject}
-            ></ProjectOverview>
-          </CSSTransition>
-        </Wrapper>
-      </ThemeProvider>
-    </GlobalStyles>
-  )
-}
+const App = () => (
+  <GlobalStyles>
+    <ThemeProvider theme={theme}>
+      <Wrapper id="containerElement">
+        {/* <LoadingSplashScreen /> */}
+        <Cover />
+        <Expertise />
+        <FeaturedProjects />
+        <Footer />
+      </Wrapper>
+    </ThemeProvider>
+  </GlobalStyles>
+)
 
 const Wrapper = styled.div`
   display: flex;
@@ -97,14 +39,14 @@ const Wrapper = styled.div`
   overflow-x: hidden !important;
   margin: 0;
   min-height: 100vh;
-  background: #e91e63;
+  background: #0a192f;
 `
 
 const GlobalStyles = styled.div`
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
-  background-color: white;
+  background-color: #0a192f;
   max-width: 100% !important;
   width: 100% !important;
   margin: 0;

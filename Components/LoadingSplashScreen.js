@@ -1,14 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import Logo from './Logo'
-import { faAngleDoubleDown } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {
-  Container as UnstyledContainer,
-  Row as UnstyledRow,
-} from 'react-bootstrap'
-import { Timeline, Tween } from 'react-gsap'
-import { Link as UnstyledLink } from 'react-scroll'
 
 //  <Timeline
 // labels={[

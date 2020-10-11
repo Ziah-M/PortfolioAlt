@@ -1,17 +1,13 @@
 import * as ROUTES from '../../../core/routes/routes'
 import * as P from '../../../private'
-import { nameMovieSite, nameRestaurant } from '../../../private'
+import {
+  nameMovieSite,
+  nameRestaurant,
+  nameFull,
+  nameFirst,
+} from '../../../private'
 
-const DEFAULT_PROJECT_DATA = {
-  name: 'Default Application',
-  url: ROUTES.ENTER,
-  technologies: ['Tech 1', 'Tech2', 'Tech3'],
-  description:
-    'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor quod mollitia explicabo numquam animi dolore nihil, excepturi impedit eaque doloribus. Repudiandae ipsum, nulla commodi quia itaque rem eos consectetur temporibus. Optio consectetur dignissimos temporibus ratione voluptate. Delectus illo assumenda aliquam officiis consequuntur dolore molestias eveniet! Aspernatur nemo, inventore sapiente voluptatem voluptates eligendi unde perspiciatis ipsum, reprehenderit ipsa harum blanditiis! Quasi veniam praesentium quis? Porro voluptatibus deserunt dolorem numquam recusandae dignissimos suscipit? Deserunt quam amet maiores asperiores ullam sed consequuntur quaerat laboriosam provident consequatur, assumenda eos doloribus ut tempora quis, tempore nemo dolorem! Laboriosam ipsam sint labore eaque expedita ipsum dolore!',
-  imgUrl: 'https://i.imgur.com/hni8BNJ.jpg',
-}
-
-const GIOVENTINOS = {
+export const RESTAURANT = {
   name: `${nameRestaurant}`,
   url: ROUTES.RESTAURANT,
   technologies: ['HTML5', 'CSS3', 'JavaScript', 'React', 'Bootstrap'],
@@ -19,7 +15,7 @@ const GIOVENTINOS = {
   imgUrl: 'https://i.imgur.com/PWomAoC.jpg',
 }
 
-const MOVIES_OVERLOAD = {
+export const MOVIES = {
   name: `${nameMovieSite}`,
   url: ROUTES.MOVIES,
   technologies: [
@@ -34,7 +30,7 @@ const MOVIES_OVERLOAD = {
   imgUrl: 'https://i.imgur.com/5gVzFDC.png',
 }
 
-const BUG_TRACKER = {
+export const BUG_TRACKER = {
   name: 'Bug Tracker',
   url: ROUTES.BUG_TRACKER,
   technologies: ['HTML 5', 'CSS 3', 'JavaScript', 'React', 'Redux', 'Firebase'],
@@ -46,7 +42,7 @@ const BUG_TRACKER = {
   imgUrl: 'https://i.imgur.com/lo89Qq7.jpg',
 }
 
-const SKILLS = {
+export const SKILLS = {
   frontend: [
     'React',
     'HTML 5',
@@ -74,23 +70,9 @@ const SKILLS = {
   other: ['Responsive Design', 'Google Analytics', 'Sales & Marketing'],
 }
 
-export const getProjectData = (id) => {
-  if (id === `${nameRestaurant}`) return GIOVENTINOS
-  if (id === `${nameMovieSite}`) return MOVIES_OVERLOAD
-  if (id === 'Bug Tracker') return BUG_TRACKER
-  return DEFAULT_PROJECT_DATA
-}
+export const NAME_FULL = `${P.nameFull}`
 
-export const getName = () => ({
-  first: P.nameFirst,
-  last: P.nameLast,
-})
+export const NAME_FIRST = `${P.nameFirst}`
 
 export const ABOUT = `
-Hi, I'm ${
-  getName().first
-} and I'm a front-end web developer. I love working with HTML, CSS, JavaScript and the React framework and ecosystem, to solve problems and create aesthetic, responsive, and performant modern web applications that delight users. My goal is to become better every day in all the intricacies of web development, and to learn new technologies, on the path to becoming a full-stack engineer.`
-
-export const getSkills = () => SKILLS
-
-export const getAbout = () => ABOUT
+Hi, I'm ${NAME_FIRST} and I'm a front-end web developer. I love working with HTML, CSS, JavaScript and the React framework and ecosystem, to solve problems and create aesthetic, responsive, and performant modern web applications that delight users. My goal is to become better every day in all the intricacies of web development, and to learn new technologies, on the path to becoming a full-stack engineer.`

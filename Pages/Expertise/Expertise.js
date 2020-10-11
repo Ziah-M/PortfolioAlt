@@ -1,23 +1,17 @@
 import React from 'react'
 import {
+  Col as UCol,
   Container as UContainer,
   Row as URow,
-  Col as UCol,
 } from 'react-bootstrap'
 import styled from 'styled-components'
-import useScript from '../../Components/useScript'
-
-const ABOUT =
-  'Hi my name is Ziah. I am a front-end engineer with a passion for developing pixel-perfect and performant modern web applications'
+import * as D from '../../Data'
 
 const Expertise = () => {
-  useScript(
-    '<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@master/devicon.min.css">',
-  )
   return (
     <Wrapper>
       <Row className="heading">Expertise</Row>
-      <Row className="about">{ABOUT}</Row>
+      <Row className="about">{D.ABOUT}</Row>
       <Row className="skills-section">
         <Col xs={11} sm={5} md={3} className="skill-heading">
           Languages
@@ -91,7 +85,6 @@ const Row = styled(URow)`
 
   &.about {
     padding: 20px 20% 40px 20%;
-    text-align: center;
     color: rgba(0, 0, 0, 0.6);
   }
 
@@ -106,6 +99,7 @@ const Row = styled(URow)`
     margin: 0 20px;
     text-align: center;
     max-width: 250px;
+    margin-top:30px;
   }
 
   .skill-icons {
@@ -118,6 +112,7 @@ const Row = styled(URow)`
 
     i {
       font-size: 75px;
+      margin-bottom:40px;
     }
   }
 `
@@ -127,6 +122,8 @@ const Col = styled(UCol)``
 const Icon = styled.div`
   width: 75px;
   height: 75px;
+  margin-bottom:40px;
+
 
   .iconify {
     font-size: 50px;
