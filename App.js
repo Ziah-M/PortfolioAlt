@@ -56,7 +56,7 @@ const App = () => {
           {showLanding && (
             <>
               {/* <Navbar /> */}
-              {/* <Cover /> */}
+              <Cover />
               {/* <Headline />
               <Projects toggleShowProject={toggleShowProject} />
               <Skills />

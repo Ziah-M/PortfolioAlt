@@ -12,143 +12,69 @@ import { getName } from '../../Data'
 import { VideoBackground } from '../../Components'
 import { VimeoBackground } from '../../Components'
 
+{
+  /* <Timeline
+labels={[
+  {
+    label: 'start',
+    position: 0,
+  },
+  {
+    label: 'start-name',
+    position: 'start+=1',
+  },
+  {
+    label: 'start-tagline',
+    position: 'start+=1.8',
+  },
+]}
+> */
+}
+
+// <Tween
+// from={{ filter: 'blur(200px)' }}
+// to={{ filter: 'blur(0px)' }}
+// duration={1}
+// position="start-name"
+// >
+
 const Cover = ({ handleScroll = (f) => f }) => {
   const { first, last } = getName()
   return (
+    <>
+            <ForegroundCenteredContainer>
+          <Container>
+            <Text className="greeting">Hi, my name is</Text>
+            <Text className="name">Ziah Mayne.</Text>
+            <Text className="tagline">I build things for the web.</Text>
+            <Text className="about">
+              I'm a front-end software engineer based in Sydney, AU specializing
+              in building exceptional websites, applications, and everything in
+              between.
+            </Text>
+          </Container>
+        </ForegroundCenteredContainer>
     <VimeoBackground>
       <Wrapper id="home">
         {/* <VideoBackground /> */}
-        <Timeline
-          labels={[
-            {
-              label: 'start',
-              position: 0,
-            },
-            {
-              label: 'start-name',
-              position: 'start+=1',
-            },
-            {
-              label: 'start-tagline',
-              position: 'start+=1.8',
-            },
-          ]}
+
+
+
+        <Tween
+          from={{ y: 0 }}
+          to={{ y: '-5vh' }}
+          duration={2}
+          repeat={-1}
+          yoyo
+          position="start"
         >
-          <ForegroundCenteredContainer>
-            <Container
-              style={{
-                height: '300px',
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'center',
-              }}
-            >
-              <Tween
-                from={{ filter: 'blur(200px)' }}
-                to={{ filter: 'blur(0px)' }}
-                duration={1}
-                position="start-name"
-              >
-                <Row>
-                  <Name>
-                    {first} {last}
-                  </Name>
-                </Row>
-              </Tween>
-              <Row>
-                <Tween
-                  from={{ filter: 'blur(200px)', scale: 0.1 }}
-                  to={{ filter: 'blur(0px)', scale: 1 }}
-                  duration={1}
-                  position="start-tagline"
-                >
-                  <Tagline>
-                    <p>Hi, my name is</p>
-                    <br />
-                    Ziah Mayne
-                    <br />
-                    <h1>I build things for the web.</h1>
-                    <br />
-                    <p>
-                      I'm a front-end software engineer based in Sydney, AU
-                      specializing in building exceptional websites,
-                      applications, and everything in between.
-                    </p>
-                  </Tagline>
-                </Tween>
-              </Row>
-            </Container>
-          </ForegroundCenteredContainer>
-          <Tween
-            from={{ filter: 'blur(200px)' }}
-            to={{ filter: 'blur(0px)' }}
-            duration={2}
-            position="start"
-          >
-            <CenteredContainer>
-              <Container>
-                <Row>
-                  <Logo>
-                    <Initials>
-                      {first.charAt(0)}
-                      {last.charAt(0)}
-                    </Initials>
-                  </Logo>
-                </Row>
-                <Row>
-                  <Link
-                    activeClass="active"
-                    to="skills"
-                    spy
-                    smooth
-                    offset={-50}
-                    duration={3000}
-                  >
-                    Skills
-                  </Link>
-                  &nbsp;
-                  <BrightColor>/</BrightColor>&nbsp;
-                  <Link
-                    activeClass="active"
-                    to="projects"
-                    spy
-                    smooth
-                    offset={-50}
-                    duration={2000}
-                  >
-                    Projects
-                  </Link>
-                  &nbsp; <BrightColor>/</BrightColor> &nbsp;
-                  <Link
-                    activeClass="active"
-                    to="contact"
-                    spy
-                    smooth
-                    offset={-50}
-                    duration={2500}
-                  >
-                    Contact
-                  </Link>
-                </Row>
-              </Container>
-            </CenteredContainer>
-          </Tween>
-          <Tween
-            from={{ y: 0 }}
-            to={{ y: '-5vh' }}
-            duration={2}
-            repeat={-1}
-            yoyo
-            position="start"
-          >
-            <IconContainer>
-              <Scroll>Scroll</Scroll>
-              <Icon icon={faAngleDoubleDown} />
-            </IconContainer>
-          </Tween>
-        </Timeline>
+          <IconContainer>
+            <Scroll>Scroll</Scroll>
+            <Icon icon={faAngleDoubleDown} />
+          </IconContainer>
+        </Tween>
       </Wrapper>
-    </VimeoBackground>
+    </VimeoBackground></>
   )
 }
 
@@ -169,29 +95,11 @@ const CenteredContainer = styled.div`
 
 const ForegroundCenteredContainer = styled(CenteredContainer)`
   z-index: 10;
-`
-
-const Name = styled.h1`
-  color: white;
-  font-size: 72px;
-  user-select: none;
-
-  @media (max-width: 400px) {
-    font-size: 50px;
-  }
-`
-
-const Tagline = styled.h6`
-  color: lightgray;
-  user-select: none;
-
-  @media (max-width: 400px) {
-    font-size: 14px;
-  }
-`
-
-const BrightColor = styled.span`
-  color: #e91e63;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width:350px;
 `
 
 const Wrapper = styled(UnstyledContainer)`
@@ -209,44 +117,10 @@ const Wrapper = styled(UnstyledContainer)`
   align-items: center;
   pointer-events: auto;
   user-select: none;
-`
 
-const Row = styled(UnstyledRow)`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
 `
 
 const Container = styled(UnstyledContainer)``
-
-const Logo = styled.div`
-  color: #e91e63;
-  height: 300px;
-  width: 300px;
-  font-size: 300px;
-  @media (max-width: 400px) {
-    font-size: 200px;
-  }
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  user-select: none;
-`
-
-const Initials = styled.span`
-  user-select: none;
-`
-
-const Link = styled(UnstyledLink)`
-  cursor: pointer;
-  user-select: none;
-  transition: 0.3s ease-in;
-  &:hover {
-    color: lightsteelblue !important;
-  }
-`
 
 const Scroll = styled.div`
   font-size: 20px;
@@ -264,6 +138,35 @@ const IconContainer = styled.div`
   bottom: 3vh;
   left: 50%;
   transform: translate(-50%);
+`
+
+const Text = styled.div`
+  color: white;
+
+  &.greeting {
+    color: rgb(100, 255, 218);
+    font-size: 14px;
+    font-family: 'Roboto Mono', monospace;
+  }
+
+  &.name {
+    font-weight: 600;
+    font-size: 54px;
+    font-family: 'Open Sans Condensed', sans-serif;
+  }
+
+  &.tagline {
+    font-weight: 600;
+    font-size: 54px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: 		rgb(232,232,232);
+  }
+
+  &.about {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Roboto Mono', monospace;
+  }
 `
 
 export default Cover

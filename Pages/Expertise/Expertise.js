@@ -16,7 +16,18 @@ const Expertise = () => {
   )
   return (
     <Wrapper>
-      <Row className="heading">Expertise</Row>
+      <Row className="heading">
+        Expertise
+        <Svg viewBox="0 0 84 96">
+          <Poly
+            stroke="rgb(100, 255, 218)"
+            stroke-width="5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            points="39 0 0 22 0 67 39 90 78 68 78 23"
+          ></Poly>
+        </Svg>
+      </Row>
       <Row className="about">{ABOUT}</Row>
       <Row className="skills-section">
         <Col xs={11} sm={5} md={3} className="skill-heading">
@@ -144,6 +155,15 @@ const Icon = styled.div`
   .firebase {
     color: darkgrey;
   }
+`
+
+const Poly = styled.polygon`
+  fill: transparent;
+`
+
+const Svg = styled.svg`
+  height: 100px;
+  width: 100px;
 `
 
 export default Expertise

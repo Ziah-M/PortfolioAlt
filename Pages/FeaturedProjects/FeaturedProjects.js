@@ -78,9 +78,12 @@ const FeaturedProjects = () => {
 }
 
 const Wrapper = styled(UContainer)`
+  background-color: #f8f9d2;
+  background-image: linear-gradient(315deg, #f8f9d2 0%, #e8dbfc 74%);
   width: 100%;
   max-width: 100vw;
-  background: rgb(250, 250, 250);
+  padding:50px 0;
+  /* background: rgb(250, 250, 250); */
 `
 
 const Row = styled(URow)`
