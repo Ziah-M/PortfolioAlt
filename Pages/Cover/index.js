@@ -7,41 +7,55 @@ import styled from 'styled-components'
 import { VimeoBackground } from '../../Components'
 import { NAME_FULL } from '../../Data'
 
-const Cover = ({ handleScroll = (f) => f }) => (
-  <>
-    <ForegroundCenteredContainer>
-      <Container>
-        <Text className="greeting">Hi, my name is</Text>
-        <Text className="name">{NAME_FULL}.</Text>
-        <Text className="tagline">I build things for the web.</Text>
-        <Text className="about">
-          I'm a front-end software engineer based in Sydney, Australia
-          specializing in building exceptional websites, applications, and
-          everything in between.
-        </Text>
-      </Container>
-    </ForegroundCenteredContainer>
-    <VimeoBackground>
-      <Wrapper id="home">
-        {/* <VideoBackground /> */}
+const Cover = ({ handleScroll = (f) => f }) => {
+  const stopVideo = function (element) {
+    var iframe = element.querySelector('iframe')
+    var video = element.querySelector('video')
+    if (iframe) {
+      var iframeSrc = iframe.src
+      iframe.src = iframeSrc
+    }
+    if (video) {
+      video.pause()
+    }
+  }
 
-        <Tween
-          from={{ y: '-3vh' }}
-          to={{ y: '-8vh' }}
-          duration={2}
-          repeat={-1}
-          yoyo
-          position="start"
-        >
-          <IconContainer>
-            <Scroll>Scroll</Scroll>
-            <Icon icon={faAngleDoubleDown} />
-          </IconContainer>
-        </Tween>
-      </Wrapper>
-    </VimeoBackground>
-  </>
-)
+  return (
+    <>
+      <ForegroundCenteredContainer>
+        <Container>
+          <Text className="greeting">Hi, my name is</Text>
+          <Text className="name">{NAME_FULL}.</Text>
+          <Text className="tagline">I build things for the web.</Text>
+          <Text className="about">
+            I'm a front-end software engineer based in Sydney, Australia
+            specializing in building exceptional websites, applications, and
+            everything in between.
+          </Text>
+        </Container>
+      </ForegroundCenteredContainer>
+      <VimeoBackground>
+        <Wrapper id="home">
+          {/* <VideoBackground /> */}
+
+          <Tween
+            from={{ y: '-3vh' }}
+            to={{ y: '-8vh' }}
+            duration={2}
+            repeat={-1}
+            yoyo
+            position="start"
+          >
+            <IconContainer>
+              <Scroll>Scroll</Scroll>
+              <Icon icon={faAngleDoubleDown} />
+            </IconContainer>
+          </Tween>
+        </Wrapper>
+      </VimeoBackground>
+    </>
+  )
+}
 
 const CenteredContainer = styled.div`
   padding: 0;
@@ -133,6 +147,7 @@ const Text = styled.div`
   &.greeting {
     color: rgb(100, 255, 218);
     font-size: 16px;
+    margin-bottom: 10px;
     font-family: 'Roboto Mono', monospace;
     @media (max-width: 750px) {
       font-size: 14px;

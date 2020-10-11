@@ -42,7 +42,7 @@ const FlexContainer = styled.div`
 
 const OverviewSection = styled.div`
   width: 400px;
-  margin:0 25px;
+  margin: 0 25px;
 `
 
 const Row = styled.div`
@@ -77,9 +77,10 @@ const Row = styled.div`
 const Button = styled.button`
   border-radius: 10px;
   min-width: 100px;
+  height: 35px;
   border: 1px solid #54516a;
   background: white;
-  margin: 30px 15px 30px 0;
+  margin: 30px 25px 30px 0;
 
   transition: all 0.4s ease-in-out;
 
@@ -93,7 +94,7 @@ const ImageSection = styled.div`
   width: 350px;
   height: 350px;
   cursor: pointer;
-  margin:0 25px;
+  margin: 0 25px;
 `
 
 const Img = styled.img`

@@ -12,7 +12,7 @@ export const RESTAURANT = {
   url: ROUTES.RESTAURANT,
   technologies: ['HTML5', 'CSS3', 'JavaScript', 'React', 'Bootstrap'],
   description: 'A site for a fictional pizzeria restaurant.',
-  imgUrl: 'https://i.imgur.com/PWomAoC.jpg',
+  imgUrl: 'https://i.imgur.com/2qHymLn.jpg',
 }
 
 export const MOVIES = {
@@ -27,7 +27,7 @@ export const MOVIES = {
   ],
   description: `An application for browsing information on movies, actors and TV shows. It includes search, detailed information on movies and actors, reviews, trailers, cast information, rating movies, and adding to a playlist.
   `,
-  imgUrl: 'https://i.imgur.com/5gVzFDC.png',
+  imgUrl: 'https://i.imgur.com/RrT51kx.jpg',
 }
 
 export const BUG_TRACKER = {
@@ -39,7 +39,7 @@ export const BUG_TRACKER = {
   Firebase is used for the back-end. The app comes with a demo admin-mode that simulates all CRUD operations without affecting the integrity of the data in the database.
   The app also features user authentication, session management, and role-based authorization.
   `,
-  imgUrl: 'https://i.imgur.com/lo89Qq7.jpg',
+  imgUrl: 'https://i.imgur.com/dxoZk6t.jpg',
 }
 
 export const SKILLS = {

@@ -5,6 +5,7 @@ import { Expertise, FeaturedProjects } from './Pages'
 import Cover from './Pages/Cover'
 import Footer from './Pages/Footer'
 import './styles.css'
+import { Controller, Scene } from 'react-scrollmagic'
 
 const theme = {
   goldAccent: '#deb150',
@@ -19,11 +20,46 @@ const App = () => (
   <GlobalStyles>
     <ThemeProvider theme={theme}>
       <Wrapper id="containerElement">
-        {/* <LoadingSplashScreen /> */}
-        <Cover />
-        <Expertise />
-        <FeaturedProjects />
-        <Footer />
+        <Controller>
+          <Scene
+            duration={400}
+            triggerHook={0.6}
+            triggerElement="#about-paragraph"
+            classToggle={['.about-section', 'visible']}
+          >
+            <></>
+          </Scene>
+          <Scene
+            duration={600}
+            triggerHook={0.6}
+            triggerElement="#skill-two"
+            classToggle={['.skill-two', 'visible']}
+          >
+            <></>
+          </Scene>
+          <Scene
+            duration={600}
+            triggerHook={0.6}
+            triggerElement="#skill-three"
+            classToggle={['.skill-three', 'visible']}
+          >
+            <></>
+          </Scene>
+          <Scene
+            duration={600}
+            triggerHook={0.6}
+            triggerElement="#skill-one"
+            classToggle={['.skill-one', 'visible']}
+          >
+            <>
+              {/* <LoadingSplashScreen /> */}
+              <Cover />
+              <Expertise />
+              <FeaturedProjects />
+              <Footer />
+            </>
+          </Scene>
+        </Controller>
       </Wrapper>
     </ThemeProvider>
   </GlobalStyles>

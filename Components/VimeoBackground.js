@@ -7,11 +7,13 @@ const VIDEO_ID = '418027174'
 const VimeoBackground = ({ children }) => (
   <VimeoWrapper>
     <VimeoIframe
-      src={`https://player.vimeo.com/video/${VIDEO_ID}?background=1&autoplay=1&loop=1&byline=0&title=0`}
+      id="videobg"
+      src={`https://player.vimeo.com/video/${VIDEO_ID}?background=1&autoplay=1&loop=1&byline=0&title=0&muted=true&playsinline=true`}
       frameborder="0"
       webkitallowfullscreen
       mozallowfullscreen
       allowfullscreen
+      playsinline
     ></VimeoIframe>
     <DarkOverlay />
     <Children>{children}</Children>

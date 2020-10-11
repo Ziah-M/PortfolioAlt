@@ -28,8 +28,19 @@ const FeaturedProjects = () => {
 }
 
 const Wrapper = styled(UContainer)`
-  background-color: #f8f9d2;
-  background-image: linear-gradient(315deg, #f8f9d2 0%, #e8dbfc 74%);
+  /* background: rgb(250, 250, 250); */
+  background: #ece9e6; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #ffffff,
+    #ece9e6
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #ffffff,
+    #ece9e6
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   width: 100%;
   max-width: 100vw;
   padding: 50px 0;
