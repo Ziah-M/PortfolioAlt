@@ -4,7 +4,7 @@ import { useHistory } from 'react-router'
 import * as D from '../../Data'
 
 const ProjectCard = ({
-  projectData: { name, description, technologies, url, imgUrl },
+  projectData: { name, description, technologies, url, imgUrl, git },
 }) => {
   const history = useHistory()
   return (
@@ -18,7 +18,7 @@ const ProjectCard = ({
           <Row className="description">{description}</Row>
           <Row className="buttons">
             <Button onClick={() => history.push(url)}>Demo</Button>
-            <Button>Code</Button>
+            <Button onClick={() => window.location.assign(git)}>Code</Button>
           </Row>
         </OverviewSection>
         <ImageSection>

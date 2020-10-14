@@ -22,7 +22,7 @@ const App = () => (
       <Wrapper id="containerElement">
         <Controller>
           <Scene
-            duration={400}
+            duration={600}
             triggerHook={0.6}
             triggerElement="#about-paragraph"
             classToggle={['.about-section', 'visible']}
@@ -52,7 +52,7 @@ const App = () => (
             classToggle={['.skill-one', 'visible']}
           >
             <>
-              {/* <LoadingSplashScreen /> */}
+              <LoadingSplashScreen />
               <Cover />
               <Expertise />
               <FeaturedProjects />

@@ -5,6 +5,9 @@ import {
   nameRestaurant,
   nameFull,
   nameFirst,
+  gitRestaurant,
+  gitMovieSite,
+  gitIssueTracker,
 } from '../../../private'
 
 export const RESTAURANT = {
@@ -13,6 +16,7 @@ export const RESTAURANT = {
   technologies: ['HTML5', 'CSS3', 'JavaScript', 'React', 'Bootstrap'],
   description: 'A site for a fictional pizzeria restaurant.',
   imgUrl: 'https://i.imgur.com/2qHymLn.jpg',
+  git: gitRestaurant,
 }
 
 export const MOVIES = {
@@ -28,6 +32,7 @@ export const MOVIES = {
   description: `An application for browsing information on movies, actors and TV shows. It includes search, detailed information on movies and actors, reviews, trailers, cast information, rating movies, and adding to a playlist.
   `,
   imgUrl: 'https://i.imgur.com/RrT51kx.jpg',
+  git: gitMovieSite,
 }
 
 export const BUG_TRACKER = {
@@ -40,6 +45,7 @@ export const BUG_TRACKER = {
   The app also features user authentication, session management, and role-based authorization.
   `,
   imgUrl: 'https://i.imgur.com/dxoZk6t.jpg',
+  git: gitIssueTracker,
 }
 
 export const SKILLS = {
