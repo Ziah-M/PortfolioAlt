@@ -8,7 +8,7 @@ import styled from 'styled-components'
 import * as D from '../../Data'
 
 const Expertise = () => (
-  <Wrapper>
+  <Wrapper className="expertise-page">
     <Row className="heading about-section">Expertise</Row>
     <Row className="about about-section" id="about-paragraph">
       {D.ABOUT}
@@ -74,7 +74,12 @@ const Wrapper = styled(UContainer)`
   width: 100%;
   max-width: 100vw;
   padding: 50px 0;
-  background: rgb(250, 250, 250);
+  background: #0a192f;
+
+  &.visible {
+    transition: all 0.6s ease-in-out;
+    background: rgba(250, 250, 250);
+  }
 `
 
 const Row = styled(URow)`

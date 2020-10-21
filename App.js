@@ -23,15 +23,23 @@ const App = () => (
         <Controller>
           <Scene
             duration={600}
-            triggerHook={0.6}
+            triggerHook={0.8}
             triggerElement="#about-paragraph"
             classToggle={['.about-section', 'visible']}
           >
             <></>
           </Scene>
           <Scene
+            duration={2000}
+            triggerHook={1}
+            triggerElement="#about-paragraph"
+            classToggle={['.expertise-page', 'visible']}
+          >
+            <></>
+          </Scene>
+          <Scene
             duration={600}
-            triggerHook={0.6}
+            triggerHook={0.8}
             triggerElement="#skill-two"
             classToggle={['.skill-two', 'visible']}
           >
@@ -39,7 +47,7 @@ const App = () => (
           </Scene>
           <Scene
             duration={600}
-            triggerHook={0.6}
+            triggerHook={0.8}
             triggerElement="#skill-three"
             classToggle={['.skill-three', 'visible']}
           >
@@ -47,7 +55,7 @@ const App = () => (
           </Scene>
           <Scene
             duration={600}
-            triggerHook={0.6}
+            triggerHook={0.8}
             triggerElement="#skill-one"
             classToggle={['.skill-one', 'visible']}
           >
